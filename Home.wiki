@@ -1,5 +1,4 @@
 
-
 = Welcome jose.4.j=
 
 jose.4.j is an Apache 2 licensed open source implementation of JOSE and JWT written in pure Java.
@@ -9,7 +8,7 @@ jose.4.j is an Apache 2 licensed open source implementation of JOSE and JWT writ
 
 == Code Examples ==
 
-=== Signature Application using JSON Web Signature (JWS) ===
+=== Singing with JSON Web Signature (JWS) ===
 {{{
 #!java
     //
