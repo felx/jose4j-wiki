@@ -9,6 +9,7 @@ The dependencies are also listed in the pom.xml file in the [[https://bitbucket.
  
 
 == Code Examples ==
+jose.4.j is (hopefully) easy to use and some code examples are given here for some common things you might need to do with it.
 
 === Signature Verification of a JSON Web Signature (JWS) using a JSON Web Key (JWK) ===
 {{{
