@@ -1,4 +1,4 @@
-= Welcome jose.4.j!=
+= Welcome to jose.4.j!=
 
 jose.4.j is an Apache 2 licensed open source implementation of JOSE and JWT written in pure Java.
 
