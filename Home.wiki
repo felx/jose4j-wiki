@@ -2,7 +2,10 @@
 
 jose.4.j is an Apache 2 licensed open source implementation of JOSE and JWT written in pure Java.
 
+== Dependencies ==
+The jose.4.j library relies on Codec and Logging from [[http://commons.apache.org/|Apache Commons]] as well as [[https://code.google.com/p/json-simple/|JSON-Simple]]. Attempts have been made to keep the dependencies list as short as possible but it seemed like a bad idea to try and write a base 64 encoder, a logging framework and a JSON parser when so many good implementations of those things already exist. 
 
+The dependencies are also listed in the pom.xml file in the [[https://bitbucket.org/b_c/jose4j/src|source]] and Maven should just handle them for you, if you build from source.
  
 
 == Code Examples ==
