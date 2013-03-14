@@ -3,7 +3,7 @@
 The jose.4.j library is an Apache 2 licensed open source implementation of JOSE and JWT in Java.
 
 
-Quick overview jose.4.j's current support:
+Quick overview of jose.4.j's current support:
 * JWS: RSA, Elliptic Curve and HMAC algorithms  
 * JWK: RSA and EC key types (also PKIX)
  
