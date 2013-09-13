@@ -1,4 +1,4 @@
-# JWS Code Examples #
+## JWS Code Examples ##
 
 ### Signing with JSON Web Signature (JWS) ###
 ```
