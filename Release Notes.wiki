@@ -1,5 +1,4 @@
-
-== version 0.3.0 ==
+=== jose4j-0.3.0 ===
 
 Introduction of JWE support 
 * Content Encryption "enc" algoritms: A128CBC-HS256, A192CBC-HS384, A256CBC-HS512 
