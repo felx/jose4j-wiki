@@ -1,0 +1,5 @@
+
+### 0.3.0 ### 
+JWE support 
+Content Encryption "enc": A128CBC-HS256, A192CBC-HS384, A256CBC-HS512 
+Key Management "alg": ECDH-ES, ECDH-ES+A128KW, ECDH-ES+A192KW, ECDH-ES+A256KW, RSA-OAEP, RSA1_5, A128KW, A192KW, A256KW, dir
