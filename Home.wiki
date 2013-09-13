@@ -9,7 +9,7 @@ Quick overview of jose.4.j's current support:
 * JWK: 'public' JWKs with EC and RSA key types and private key support. Also the oct key type. 
  
 == Code Examples ==
-jose.4.j is (hopefully) easy to use and some code examples are provided to demonstrate some common things you might need to do with it.
+jose.4.j is (hopefully) very easy to use and, to help get started, some code examples are provided demonstrating some common things you might want to do with it.
 
 The [[JWS%20Examples|JWS Examples]] show how to easily apply and verify signatures.
 
