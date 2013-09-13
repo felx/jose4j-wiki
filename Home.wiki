@@ -6,7 +6,7 @@ The jose.4.j library is an Apache 2 licensed open source implementation of JOSE 
 Quick overview of jose.4.j's current support:
 * JWS: RSA, Elliptic Curve and HMAC algorithms as well as the unsigned "none" algorithm
 * JWE: RSAES-PKCS1-V1_5 and RSAES OAEP key encryption, AES key wrapping, direct encryption, and Elliptic Curve Diffie-Hellman Ephemeral Static key agreement with and without AES key wrapping. AES_CBC_HMAC_SHA2 content encryption.
-* JWK: JWKs with EC and RSA key types including both public and private key support. The oct key type for symmetric keys is also supported. 
+* JWK: JWKs with EC and RSA key types including both public and private key support as well as the oct key type for symmetric keys. 
  
 == Code Examples ==
 jose.4.j is (hopefully) very easy to use and, to help get started, some code examples are provided demonstrating some common things you might want to do with it.
