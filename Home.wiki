@@ -8,6 +8,10 @@ Quick overview of jose.4.j's current support:
 * JWE: RSAES-PKCS1-V1_5 and RSAES OAEP key encryption, AES key wrapping, direct encryption, and Elliptic Curve Diffie-Hellman Ephemeral Static key agreement with and without AES key wrapping. AES_CBC_HMAC_SHA2 content encryption.
 * JWK: 'public' JWKs with EC and RSA key types and private key support. Also the oct key type. 
  
+== Code Examples ==
+jose.4.j is (hopefully) easy to use and some code examples are provided to demonstrate some common things you might need to do with it.
+
+[[JWS%20Examples|JWS Examples]]
 
 == Dependencies ==
 The jose.4.j library relies on Codec and Logging from [[http://commons.apache.org/|Apache Commons]] as well as [[https://code.google.com/p/json-simple/|JSON-Simple]]. Attempts have been made to keep the dependencies list as short as possible but it seemed like a bad idea to try and write a base 64 encoder, a logging framework and a JSON parser when so many good implementations of those things already exist. 
@@ -17,6 +21,4 @@ The dependencies are also listed in the pom.xml file in the [[https://bitbucket.
 Someday I'll figure out how get it into the central maven repo.
  
 
-== Code Examples ==
-jose.4.j is (hopefully) easy to use and some code examples are given here for some common things you might need to do with it.
 
