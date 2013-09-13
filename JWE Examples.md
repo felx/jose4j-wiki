@@ -57,7 +57,7 @@
     receiverJwe.setCompactSerialization(compactSerialization);
 
     // Symmetric encryption, like we are doing here, requires that both parties have the same key.
-    //
+    // The key will have had to have been securely exchanged out-of-band somehow.
     receiverJwe.setKey(jwk.getKey());
 
     // Get the message that was encrypted in the JWE. This step performs the actual decryption steps.
