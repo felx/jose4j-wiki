@@ -23,5 +23,5 @@ The dependencies are also listed in the pom.xml file in the [[https://bitbucket.
 Someday I'll figure out how get it into the central maven repo.
 
 == Release Notes == 
-Very rough [[Release%20Notes|Release Notes]].
+These very rough [[Release%20Notes|Release Notes]] capture some of the high level milestones.
  
