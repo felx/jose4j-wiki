@@ -1,5 +1,14 @@
+
+
 === jose4j-0.3.0 ===
 
 Introduction of JWE support 
 * Content Encryption "enc" algoritms: A128CBC-HS256, A192CBC-HS384, A256CBC-HS512 
 * Key Management "alg" algoritms: ECDH-ES, ECDH-ES+A128KW, ECDH-ES+A192KW, ECDH-ES+A256KW, RSA-OAEP, RSA1_5, A128KW, A192KW, A256KW, dir
+
+
+=== jose4j-0.1.0 ===
+Introduction of JWS support 
+* Algoritms "alg": none, HS256, HS384, HS512, RS256, RS384, RS512 
+Introduction of JWK support with RSA "kty"
+
