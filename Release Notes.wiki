@@ -4,10 +4,17 @@ Introduction of JWE support
 * Content Encryption "enc" algoritms: A128CBC-HS256, A192CBC-HS384, A256CBC-HS512 
 * Key Management "alg" algoritms: ECDH-ES, ECDH-ES+A128KW, ECDH-ES+A192KW, ECDH-ES+A256KW, RSA-OAEP, RSA1_5, A128KW, A192KW, A256KW, dir
 
+===  jose4j-0.2.7 ===
+Added private and symmetric key support in JWK
+Added utilities to generate EC and RSA JWKs
+
+=== jose4j-0.2.0 ===
+Added EC "kty" JWK support \\
+Added Elliptic Curve support for JWS 
+* Algoritms "alg": ES256, ES384, ES512
 
 === jose4j-0.1.0 ===
-Introduction of JWK support (only RSA "kty") \\
+Introduction of JWK support (only RSA "kty" Key Type) \\
 Introduction of JWS support 
 * Algoritms "alg": none, HS256, HS384, HS512, RS256, RS384, RS512
  
-
