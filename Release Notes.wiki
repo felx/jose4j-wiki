@@ -1,5 +1,8 @@
 Note: this is **not** a complete list of changes but rather just attempts to capture some of the more notable milestones and additions.  
 
+=== jose4j-0.3.1 ===
+update KDF for ECDH-ES key agreement per change in JWA -16 where the AlgorithmID value now has a length prefix  (http://www.ietf.org/mail-archive/web/jose/current/msg03460.html)
+
 === jose4j-0.3.0 ===
 Introduction of JWE support 
 * Content Encryption "enc" algoritms: A128CBC-HS256, A192CBC-HS384, A256CBC-HS512 
