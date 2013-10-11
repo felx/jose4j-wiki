@@ -25,7 +25,7 @@
 
     // Set the "alg" header, which indicates the key management mode for this JWE.
     // In this example we are using the direct key management mode, which means
-    // the given key will be uses directly as the content encryption key.
+    // the given key will be used directly as the content encryption key.
     senderJwe.setAlgorithmHeaderValue(KeyManagementAlgorithmIdentifiers.DIRECT);
 
     // Set the "enc" header, which indicates the content encryption algorithm to be used.
