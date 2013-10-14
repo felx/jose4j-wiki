@@ -2,7 +2,7 @@
 
 The jose.4.j library is an Apache 2 licensed open source implementation of JOSE (which can be used for JWT) in Java.
 
-JOSE is short for Javascript Object Signing and Encryption, which is the IETF Working Group developing the [[http://tools.ietf.org/html/draft-ietf-jose-json-web-signature|JSON Web Signature]] (JWS), [[http://tools.ietf.org/html/draft-ietf-jose-json-web-encryption|JSON Web Encryption]] (JWE) and [[http://tools.ietf.org/html/draft-ietf-jose-json-web-key|JSON Web Key]] (JWK) specifications. JWS and JWE use JSON and base64url encoding to secure messages in a (relatively) simple, compact and web safe format while JWK defines a JSON representation of cryptographic keys. 
+JOSE is short for Javascript Object Signing and Encryption, which is the IETF Working Group developing the [[http://tools.ietf.org/html/draft-ietf-jose-json-web-signature|JSON Web Signature]] (JWS), [[http://tools.ietf.org/html/draft-ietf-jose-json-web-encryption|JSON Web Encryption]] (JWE) and [[http://tools.ietf.org/html/draft-ietf-jose-json-web-key|JSON Web Key]] (JWK) specifications. JWS and JWE use JSON and base64url encoding to secure messages in a (relatively) simple, compact and web safe format while JWK defines a JSON representation of cryptographic keys. The actual algorithms used by JWS, JWE and JWK are defined in [[http://tools.ietf.org/html/draft-ietf-jose-json-web-algorithms|JSON Web Algorithms]] (JWA).
 
 Quick overview of jose.4.j's current support:
 * JWS: RSA, Elliptic Curve and HMAC algorithms as well as the unsigned "none" algorithm
