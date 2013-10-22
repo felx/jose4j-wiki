@@ -1,5 +1,9 @@
 Note: this is **not** a complete list of changes but rather just attempts to capture some of the more notable milestones and additions.  
 
+=== jose4j-0.3.3 ===
+* JsonWebStructure now has a fromCompactSerialization(...) and get/setPayload(...), which allows for client code to treat JWS/JWE more similarly in some cases
+* Some defect fixes and clean up
+
 === jose4j-0.3.2 ===
 *JWK toJson now takes a parameter indicating the level of output to produce (i.e. public only, public+symmetric or public+symmetric+private) 
 * Improve awareness of handling of algorithm support in the underlying Java runtime
