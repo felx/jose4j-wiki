@@ -16,7 +16,7 @@ jose.4.j is (hopefully) very easy to use and, to help get started, some code exa
 
 The [[JWS%20Examples|JWS Examples]] show how to easily apply and verify signatures.
 
-The [[JWE%20Examples|JWE Examples]] show up to encrypt and decrypt messages.
+The [[JWE%20Examples|JWE Examples]] show how to encrypt and decrypt messages.
 
 == Dependencies ==
 The jose.4.j library relies on Codec and Logging from [[http://commons.apache.org/|Apache Commons]] as well as [[https://code.google.com/p/json-simple/|JSON-Simple]]. Attempts have been made to keep the dependencies list as short as possible but it seemed like a bad idea to try and write a base 64 encoder, a logging framework and a JSON parser when so many good implementations of those things already exist. 
