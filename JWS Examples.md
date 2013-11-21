@@ -35,7 +35,7 @@
 
 ```
 
-### Signature Verification of a JWS using a JWK ###
+### JWS Verification Using a JWK ###
 
 
 ```
@@ -102,14 +102,14 @@
     System.out.println("JWS payload: " + payload);
 ```
 
-### Signature Verification using JSON Web Signature (JWS) ###
+### Signature Verification using JWS ###
 
 
 ```
 #!java
 
     //
-    // An example of signature verification using JWS
+    // An example of signature verification using JSON Web Signature (JWS)
     //
 
     // The complete JWS representation, or compact serialization, is string consisting of
