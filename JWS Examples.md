@@ -1,6 +1,6 @@
 ## JWS Code Examples ##
 
-### Signing with JSON Web Signature (JWS) ###
+### Signing with JWS ###
 ```
 #!java
     //
@@ -35,7 +35,7 @@
 
 ```
 
-### Signature Verification of a JSON Web Signature (JWS) using a JSON Web Key (JWK) ###
+### Signature Verification of a JWS using a JWK ###
 
 
 ```
@@ -109,7 +109,7 @@
 #!java
 
     //
-    // An example of signature verification using JSON Web Signature (JWS)
+    // An example of signature verification using JWS
     //
 
     // The complete JWS representation, or compact serialization, is string consisting of
