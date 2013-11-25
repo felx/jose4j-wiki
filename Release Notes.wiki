@@ -1,5 +1,10 @@
 Note: this is **not** a complete list of changes but rather just attempts to capture some of the more notable milestones and additions.  
 
+=== jose4j-0.3.4 ===
+* JWS/JWE objects now have the ability to whitelist or blacklist the algorithms that will be accepted
+* **Breaking change**: by default JsonWebSignature will not accept a Plaintext JWS (i.e. "alg":"none"). Applications can use setAlgorithmConstraints(AlgorithmConstraints.NO_CONSTRAINTS) on JsonWebSignature to indicate that a Plaintext JWS is acceptable. 
+* addSeconds(...) on IntDate now takes a long rather than an int
+
 === jose4j-0.3.3 ===
 * JsonWebStructure now has a fromCompactSerialization(...) and get/setPayload(...), which allows for client code to treat JWS/JWE more similarly in some cases
 * As a result of the above, JsonWebSignature.getPayload() now checks the signature and throws an exception, if it's not valid. JsonWebSignature.getUnverifiedPayload() can be used to access the payload without the signature check .
