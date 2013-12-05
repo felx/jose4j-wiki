@@ -14,7 +14,7 @@ Quick overview of jose.4.j's current support:
 == Code Examples ==
 jose.4.j is (hopefully) very easy to use and, to help get started, some code examples are provided demonstrating some common things you might want to do with it.
 
-The [[JSON%20Web%20Signature%20Examples|JWS Examples]] show how to easily apply and verify signatures.
+The [[JWS%20Examples|JWS Examples]] show how to easily apply and verify signatures.
 
 The [[JWE%20Examples|JWE Examples]] show how to encrypt and decrypt messages.
 
