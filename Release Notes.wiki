@@ -1,4 +1,12 @@
-Note: this is **not** a complete list of changes but rather just attempts to capture some of the more notable milestones and additions.  
+Note: this is **not** a complete list of changes but rather just attempts to capture some of the more notable milestones and additions. 
+
+=== jose4j-0.3.5 ===
+* Added JWE support for AES GCM content encryption (A128GCM, A192GCM & A256GCM)
+* Added JWE support for AES GCM key encryption (A128GCMKW, A192GCMKW & A256GCMKW)
+* Added JWE support for PBES2 Key Encryption (PBES2-HS256+A128KW, PBES2-HS384+A192KW & PBES2-HS512+A256KW)
+* Added JWS support for RSA-PSS signatures (PS256, PS384 & PS512)
+* Fixed issues #005 and #006 where certain parameters of EC JWKs and ECDSA signature values were not the full length required by the specifications. 
+ 
 
 === jose4j-0.3.4 ===
 * JWS/JWE objects now have the ability to whitelist or blacklist the algorithms that will be accepted
