@@ -4,8 +4,16 @@ The jose.4.j library is an [[https://bitbucket.org/b_c/jose4j/src/4f10a2684a7d02
 
 JOSE is short for Javascript Object Signing and Encryption, which is the IETF Working Group developing the [[http://tools.ietf.org/html/draft-ietf-jose-json-web-signature|JSON Web Signature]] (JWS), [[http://tools.ietf.org/html/draft-ietf-jose-json-web-encryption|JSON Web Encryption]] (JWE) and [[http://tools.ietf.org/html/draft-ietf-jose-json-web-key|JSON Web Key]] (JWK) specifications. JWS and JWE use JSON and base64url encoding to secure messages in a (relatively) simple, compact and web safe format while JWK defines a JSON representation of cryptographic keys. The actual algorithms used by JWS, JWE and JWK are defined in [[http://tools.ietf.org/html/draft-ietf-jose-json-web-algorithms|JSON Web Algorithms]] (JWA).
 
-Quick overview of jose.4.j's current support:
-* JWS: RSA, Elliptic Curve and HMAC algorithms as well as the unsigned "none" algorithm
+The complete set of algorithms defined by JWA are supported by jose4j.
+
+**JWS**
+|= Digital Signature or MAC Algorithm|= JWS alg Parameter Value|
+|HMAC with SHA-2 Function |HS256, HS384 and HS512|
+|RSASSA-PKCS1-V1_5 Digital Signatures|RS256, RS384 and RS512|
+|Elliptic Curve Digital Signatures (ECDSA)|ES256, ES384 and ES512|
+|RSASSA-PSS Digital Signatures |PS256, PS384 and PS512|
+|Unsigned Plaintext|none|
+
 * JWE: RSAES-PKCS1-V1_5 and RSAES OAEP key wrapping, AES key wrapping, direct encryption, and Elliptic Curve Diffie-Hellman Ephemeral Static key agreement with and without AES key wrapping. AES_CBC_HMAC_SHA2 content encryption.
 * JWK: JWKs with EC and RSA key types including both public and private key support as well as the oct key type for symmetric keys. 
 * Currently only the compact serializations for JWS and JWE are supported. 
