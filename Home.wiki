@@ -4,8 +4,29 @@ The jose.4.j library is an [[https://bitbucket.org/b_c/jose4j/src/4f10a2684a7d02
 
 JOSE is short for Javascript Object Signing and Encryption, which is the IETF Working Group developing the [[http://tools.ietf.org/html/draft-ietf-jose-json-web-signature|JSON Web Signature]] (JWS), [[http://tools.ietf.org/html/draft-ietf-jose-json-web-encryption|JSON Web Encryption]] (JWE) and [[http://tools.ietf.org/html/draft-ietf-jose-json-web-key|JSON Web Key]] (JWK) specifications. JWS and JWE use JSON and base64url encoding to secure messages in a (relatively) simple, compact and web safe format while JWK defines a JSON representation of cryptographic keys. The actual algorithms for JWS, JWE and JWK are defined in [[http://tools.ietf.org/html/draft-ietf-jose-json-web-algorithms|JSON Web Algorithms]] (JWA).
 
-The entire set of JOSE algorithms defined in JWA are supported by jose4j for the compact serializations of JWS and JWE.
 
+The jose.4.j library supports the JWS/JWE compact serializations with the complete suite of JOSE algorithms. A more detailed breakdown is available below in the Algorithm Support section.
+
+== Code Examples ==
+jose.4.j is (hopefully) very easy to use and, to help get started, some code examples are provided demonstrating some common things you might want to do with it.
+
+The [[JWS%20Examples|JWS Examples]] show how to easily apply and verify signatures.
+
+The [[JWE%20Examples|JWE Examples]] show how to encrypt and decrypt messages.
+
+== Dependencies ==
+The jose.4.j library relies on Codec and Logging from [[http://commons.apache.org/|Apache Commons]] as well as [[https://code.google.com/p/json-simple/|JSON-Simple]]. Attempts have been made to keep the dependencies list as short as possible but it seemed like a bad idea to try and write a base 64 encoder, a logging framework and a JSON parser when so many good implementations of those things already exist. 
+
+The dependencies are also listed in the pom.xml file in the [[https://bitbucket.org/b_c/jose4j/src|source]] and Maven should just handle them for you, if you build from source.
+
+Someday I'll figure out how get it into the central maven repo.
+
+Many of the JWE algorithms also require that JCE's [[http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html|Unlimited Strength Jurisdiction Policy Files]] be installed for the JRE. 
+
+== Release Notes == 
+These very rough [[Release%20Notes|Release Notes]] capture some of the high level milestones.
+ 
+== Algorithm Support == 
 \\
 **JWS**
 |= Digital Signature or MAC Algorithm|= JWS "alg" Parameter Value|
@@ -45,24 +66,4 @@ The entire set of JOSE algorithms defined in JWA are supported by jose4j for the
 |Elliptic Curve Public/Private Keys|EC|
 |RSA Public/Private Keys|RSA|
 |Symmetric Keys (Octet sequence)|oct|
- 
-
-== Code Examples ==
-jose.4.j is (hopefully) very easy to use and, to help get started, some code examples are provided demonstrating some common things you might want to do with it.
-
-The [[JWS%20Examples|JWS Examples]] show how to easily apply and verify signatures.
-
-The [[JWE%20Examples|JWE Examples]] show how to encrypt and decrypt messages.
-
-== Dependencies ==
-The jose.4.j library relies on Codec and Logging from [[http://commons.apache.org/|Apache Commons]] as well as [[https://code.google.com/p/json-simple/|JSON-Simple]]. Attempts have been made to keep the dependencies list as short as possible but it seemed like a bad idea to try and write a base 64 encoder, a logging framework and a JSON parser when so many good implementations of those things already exist. 
-
-The dependencies are also listed in the pom.xml file in the [[https://bitbucket.org/b_c/jose4j/src|source]] and Maven should just handle them for you, if you build from source.
-
-Someday I'll figure out how get it into the central maven repo.
-
-Many of the JWE algorithms also require that JCE's [[http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html|Unlimited Strength Jurisdiction Policy Files]] be installed for the JRE. 
-
-== Release Notes == 
-These very rough [[Release%20Notes|Release Notes]] capture some of the high level milestones.
  
