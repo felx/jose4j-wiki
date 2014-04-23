@@ -1,22 +1,50 @@
 = Welcome to jose.4.j!=
 
-The jose.4.j library is an [[https://bitbucket.org/b_c/jose4j/src/4f10a2684a7d0285da5826037ad48852ecf4485f/LICENSE?at=master|Apache 2 licensed]] open source implementation of JOSE (which can be used for JWT) in Java.
+The jose.4.j library is an [[https://bitbucket.org/b_c/jose4j/src/4f10a2684a7d0285da5826037ad48852ecf4485f/LICENSE?at=master|Apache 2 licensed]] open source implementation of the JOSE specification suite (which can be used for JWT) in Java.
 
-JOSE is short for Javascript Object Signing and Encryption, which is the IETF Working Group developing the [[http://tools.ietf.org/html/draft-ietf-jose-json-web-signature|JSON Web Signature]] (JWS), [[http://tools.ietf.org/html/draft-ietf-jose-json-web-encryption|JSON Web Encryption]] (JWE) and [[http://tools.ietf.org/html/draft-ietf-jose-json-web-key|JSON Web Key]] (JWK) specifications. JWS and JWE use JSON and base64url encoding to secure messages in a (relatively) simple, compact and web safe format while JWK defines a JSON representation of cryptographic keys. The actual algorithms used by JWS, JWE and JWK are defined in [[http://tools.ietf.org/html/draft-ietf-jose-json-web-algorithms|JSON Web Algorithms]] (JWA).
+JOSE is short for Javascript Object Signing and Encryption, which is the IETF Working Group developing the [[http://tools.ietf.org/html/draft-ietf-jose-json-web-signature|JSON Web Signature]] (JWS), [[http://tools.ietf.org/html/draft-ietf-jose-json-web-encryption|JSON Web Encryption]] (JWE) and [[http://tools.ietf.org/html/draft-ietf-jose-json-web-key|JSON Web Key]] (JWK) specifications. JWS and JWE use JSON and base64url encoding to secure messages in a (relatively) simple, compact and web safe format while JWK defines a JSON representation of cryptographic keys. The actual algorithms for JWS, JWE and JWK are defined in [[http://tools.ietf.org/html/draft-ietf-jose-json-web-algorithms|JSON Web Algorithms]] (JWA).
 
-The complete set of algorithms defined by JWA are supported by jose4j.
+The entire set of JOSE algorithms defined in JWA are supported by jose4j for the compact serializations of JWS and JWE.
 
+\\
 **JWS**
-|= Digital Signature or MAC Algorithm|= JWS alg Parameter Value|
+|= Digital Signature or MAC Algorithm|= JWS "alg" Parameter Value|
 |HMAC with SHA-2 Function |HS256, HS384 and HS512|
 |RSASSA-PKCS1-V1_5 Digital Signatures|RS256, RS384 and RS512|
 |Elliptic Curve Digital Signatures (ECDSA)|ES256, ES384 and ES512|
 |RSASSA-PSS Digital Signatures |PS256, PS384 and PS512|
 |Unsigned Plaintext|none|
 
-* JWE: RSAES-PKCS1-V1_5 and RSAES OAEP key wrapping, AES key wrapping, direct encryption, and Elliptic Curve Diffie-Hellman Ephemeral Static key agreement with and without AES key wrapping. AES_CBC_HMAC_SHA2 content encryption.
-* JWK: JWKs with EC and RSA key types including both public and private key support as well as the oct key type for symmetric keys. 
-* Currently only the compact serializations for JWS and JWE are supported. 
+
+\\
+**JWE Key Encryption and Key Agreement**
+|= Key Management Algorithm|= JWE "alg" Parameter Value|
+|Direct encryption with a shared symmetric key| dir|
+|RSAES-PKCS1-V1_5 key encryption|RSA1_5|
+|RSAES using OAEP key encryption|RSA-OAEP|
+|AES key wrap|A128KW, A192KW and A256KW|
+|AES GCM key encryption|A128GCMKW, A192GCMKW and A256GCMKW|
+|Elliptic Curve Diffie-Hellman Ephemeral Static key agreement using Concat KDF|ECDH-ES|
+|Elliptic Curve Diffie-Hellman Ephemeral Static key agreement using Concat KDF with AES key wrap|ECDH-ES+A128KW, ECDH-ES+A192KW, ECDH-ES+A256KW|
+|PBES2 with HMAC SHA-2 and AES key wrapping| PBES2-HS256+A128KW, PBES2-HS384+A192KW and PBES2-HS512+A256KW|
+
+\\
+**JWE Content Encryption**
+|= Content Encryption Algorithm|= JWE "enc" Parameter Value|
+|Authenticated encryption with AES-CBC and HMAC-SHA2|A128CBC-HS256, A192CBC-HS384 and A256CBC-HS512|
+|Authenticated encryption with Advanced Encryption Standard (AES) in Galois/Counter Mode (GCM)|A128GCM, A192GCM and A256GCM| 
+
+\\
+**JWE Compression**
+|= Compression Algorithm|= JWE "zip" Parameter Value|
+|DEFLATE Compressed Data Format from RFC 1951|DEF|
+
+\\
+**JWK**
+|= Key Type|= JWK "kty" Parameter Value|
+|Elliptic Curve Public/Private Keys|EC|
+|RSA Public/Private Keys|RSA|
+|Symmetric Keys (Octet sequence)|oct|
  
 
 == Code Examples ==
