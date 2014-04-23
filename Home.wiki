@@ -1,6 +1,6 @@
 = Welcome to jose.4.j!=
 
-The jose.4.j library is an [[https://bitbucket.org/b_c/jose4j/src/4f10a2684a7d0285da5826037ad48852ecf4485f/LICENSE?at=master|Apache 2 licensed]] open source implementation of the JOSE specification suite (which can be used for JWT) in Java.
+The jose.4.j library is an [[https://bitbucket.org/b_c/jose4j/src/4f10a2684a7d0285da5826037ad48852ecf4485f/LICENSE?at=master|Apache 2 licensed]] open source implementation of the JOSE specification suite (which can be used for JWT). It is written in Java and relies solely on the JCA APIs for cryptography.
 
 JOSE is short for Javascript Object Signing and Encryption, which is the IETF Working Group developing the [[http://tools.ietf.org/html/draft-ietf-jose-json-web-signature|JSON Web Signature]] (JWS), [[http://tools.ietf.org/html/draft-ietf-jose-json-web-encryption|JSON Web Encryption]] (JWE) and [[http://tools.ietf.org/html/draft-ietf-jose-json-web-key|JSON Web Key]] (JWK) specifications. JWS and JWE use JSON and base64url encoding to secure messages in a (relatively) simple, compact and web safe format while JWK defines a JSON representation of cryptographic keys. The actual algorithms for JWS, JWE and JWK are defined in [[http://tools.ietf.org/html/draft-ietf-jose-json-web-algorithms|JSON Web Algorithms]] (JWA).
 
