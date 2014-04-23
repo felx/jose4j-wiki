@@ -4,7 +4,6 @@ The jose.4.j library is an [[https://bitbucket.org/b_c/jose4j/src/4f10a2684a7d02
 
 JOSE is short for Javascript Object Signing and Encryption, which is the IETF Working Group developing the [[http://tools.ietf.org/html/draft-ietf-jose-json-web-signature|JSON Web Signature]] (JWS), [[http://tools.ietf.org/html/draft-ietf-jose-json-web-encryption|JSON Web Encryption]] (JWE) and [[http://tools.ietf.org/html/draft-ietf-jose-json-web-key|JSON Web Key]] (JWK) specifications. JWS and JWE use JSON and base64url encoding to secure messages in a (relatively) simple, compact and web safe format while JWK defines a JSON representation of cryptographic keys. The actual algorithms for JWS, JWE and JWK are defined in [[http://tools.ietf.org/html/draft-ietf-jose-json-web-algorithms|JSON Web Algorithms]] (JWA).
 
-
 The library supports the JWS/JWE compact serializations with the complete suite of JOSE algorithms. A more detailed breakdown is available below in the Algorithm Support section.
 
 == Code Examples ==
@@ -21,10 +20,9 @@ The dependencies are also listed in the pom.xml file in the [[https://bitbucket.
 
 Someday I'll figure out how get it into the central maven repo.
 
-== Release Notes == 
-These very rough [[Release%20Notes|Release Notes]] capture some of the high level milestones.
- 
 == Algorithm Support == 
+All of the JOSE algorithms are fully implemented by jose4j. However, the library relies on the underlying cryptography provider in the Java Runtime Environment so, depending on the deployment environment, some algorithms may not be available at runtime. The tables below lists all the supported JWS/JWE/JWK algorithms and is annotated with some common JCA provider requirements.    
+
 \\
 **JWS**
 |= Digital Signature or MAC Algorithm|= JWS "alg" Parameter Value|
@@ -33,7 +31,6 @@ These very rough [[Release%20Notes|Release Notes]] capture some of the high leve
 |Elliptic Curve Digital Signatures (ECDSA)|ES256, ES384 and ES512|
 |RSASSA-PSS Digital Signatures |PS256†, PS384† and PS512†|
 |Unsigned Plaintext|none|
-
 
 \\
 **JWE Key Encryption and Key Agreement**
@@ -65,7 +62,10 @@ These very rough [[Release%20Notes|Release Notes]] capture some of the high leve
 |RSA Public/Private Keys|RSA|
 |Symmetric Keys (Octet sequence)|oct|
 
- 
 \\* Requires the JCE's Unlimited Strength Jurisdiction Policy Files be installed for the JRE (download for [[http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html|Java 7]] and [[http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html|Java 8]]).
 \\† Requires the [[https://www.bouncycastle.org/java.html|Bouncy Castle]] JCA provider (or another provider which supports RSASSA-PSS) 
 \\‡ Requires Java 8 or the [[https://www.bouncycastle.org/java.html|Bouncy Castle]] v1.50+ JCA provider (or another provider which supports AEAD ciphers though the JCA interface including recognizing GCMParameterSpec)
+
+== Release Notes == 
+These rough [[Release%20Notes|Release Notes]] capture some of the high level milestones.
+ 
