@@ -7,11 +7,30 @@ JOSE is short for Javascript Object Signing and Encryption, which is the IETF Wo
 The library supports the JWS/JWE compact serializations with the complete suite of JOSE algorithms. A more detailed breakdown is available below in the Algorithm Support section.
 
 == Code Examples ==
-jose.4.j is (hopefully) very easy to use and, to help get started, some code examples are provided demonstrating some common things you might want to do with it.
+jose.4.j is very easy to use and, to help get started, some code examples are provided demonstrating common things you might want to do with it.
 
-The [[JWS%20Examples|JWS Examples]] show how to easily apply and verify signatures.
+=== Hello World JWE Example ===
+The following snippet uses JWE to both encrypt and decrypt the message "Hello World!" in just a few lines of code.
+{{{
+#!java
 
-The [[JWE%20Examples|JWE Examples]] show how to encrypt and decrypt messages.
+ Key key = new AesKey(ByteUtil.randomBytes(16));
+ JsonWebEncryption jwe = new JsonWebEncryption();
+ jwe.setPayload("Hello World!");
+ jwe.setAlgorithmHeaderValue(KeyManagementAlgorithmIdentifiers.A128KW);
+ jwe.setEncryptionMethodHeaderParameter(ContentEncryptionAlgorithmIdentifiers.AES_128_CBC_HMAC_SHA_256);
+ jwe.setKey(key);
+ String serializedJwe = jwe.getCompactSerialization();
+ System.out.println("Serialized Encrypted JWE: " + serializedJwe);
+ jwe = new JsonWebEncryption();
+ jwe.setKey(key);
+ jwe.setCompactSerialization(serializedJwe);
+ System.out.println("Payload: " + jwe.getPayload());
+}}}
+
+Additional and more detailed examples and explanations can be found on the [[JWS%20Examples|JWS Examples]] page, which shows how to easily apply and verify signatures, and the [[JWE%20Examples|JWE Examples]] page, which shows how to encrypt and decrypt messages.
+
+
 
 == Dependencies ==
 Jose4j is compiled with/for Java 7 and will also run on Java 8.
