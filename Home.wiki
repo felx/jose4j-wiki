@@ -48,9 +48,9 @@ All of the JOSE algorithms are fully implemented by jose4j. However, the library
 **JWS**
 |= Digital Signature or MAC Algorithm|= JWS "alg" Parameter Value|
 |HMAC with SHA-2 Function |HS256, HS384 and HS512|
-|RSASSA-PKCS1-V1_5 Digital Signatures|RS256, RS384 and RS512|
-|Elliptic Curve Digital Signatures (ECDSA)|ES256, ES384 and ES512|
-|RSASSA-PSS Digital Signatures |PS256†, PS384† and PS512†|
+|RSASSA-PKCS1-V1_5 Digital Signatures with with SHA-2|RS256, RS384 and RS512|
+|Elliptic Curve Digital Signatures (ECDSA) with SHA-2|ES256, ES384 and ES512|
+|RSASSA-PSS Digital Signatures with SHA-2|PS256†, PS384† and PS512†|
 |Unsigned Plaintext|none|
 
 \\
