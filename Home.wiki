@@ -58,7 +58,7 @@ All of the JOSE algorithms are fully implemented by jose4j. However, the library
 |= Key Management Algorithm|= JWE "alg" Parameter Value|
 |Direct encryption with a shared symmetric key| dir|
 |RSAES-PKCS1-V1_5 key encryption|RSA1_5|
-|RSAES using OAEP key encryption|RSA-OAEP and RSA-OAEP-256 (coming soon needs BC or Java 8)|
+|RSAES using OAEP key encryption|RSA-OAEP and RSA-OAEP-256¶ (coming soon needs BC or Java 8)|
 |AES key wrap|A128KW, A192KW* and A256KW*|
 |AES GCM key encryption|A128GCMKW‡, A192GCMKW*‡ and A256GCMKW*‡|
 |Elliptic Curve Diffie-Hellman Ephemeral Static key agreement using Concat KDF|ECDH-ES|
@@ -86,6 +86,7 @@ All of the JOSE algorithms are fully implemented by jose4j. However, the library
 \\* Requires the JCE's Unlimited Strength Jurisdiction Policy Files be installed for the JRE (download for [[http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html|Java 7]] and [[http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html|Java 8]]).
 \\† Requires the [[https://www.bouncycastle.org/java.html|Bouncy Castle]] JCA provider (or another provider which supports RSASSA-PSS) 
 \\‡ Requires Java 8 or the [[https://www.bouncycastle.org/java.html|Bouncy Castle]] v1.50+ JCA provider (or another provider which supports AEAD ciphers though the JCA interface including recognizing GCMParameterSpec)
+\\¶ Requires Java 8 or the [[https://www.bouncycastle.org/java.html|Bouncy Castle]] JCA provider (or another provider which supports RSA/ECB/OAEPWithSHA-256AndMGF1Padding and an OAEPParameterSpec that uses SHA-256 for MGF1) 
 
 == Release Notes == 
 These rough [[Release%20Notes|Release Notes]] capture some of the high level milestones.
