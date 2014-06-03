@@ -28,6 +28,7 @@ The following snippet uses JWE to both encrypt and decrypt the message "Hello Wo
  System.out.println("Payload: " + jwe.getPayload());
 }}}
 
+=== More Examples ===
 Additional and more detailed examples and explanations can be found on the [[JWS%20Examples|JWS Examples]] page, which shows how to easily apply and verify signatures, and the [[JWE%20Examples|JWE Examples]] page, which shows how to encrypt and decrypt messages.
 
 
@@ -39,7 +40,7 @@ The jose.4.j library relies on Codec and Logging from [[http://commons.apache.or
 
 The dependencies are also listed in the pom.xml file in the [[https://bitbucket.org/b_c/jose4j/src|source]] and Maven should just handle them for you, if you build from source.
 
-Someday I'll figure out how get it into the central maven repo.
+Someday I'll figure out how get it into the central maven repo. In the meantime, it can be added to project as an unmanaged dependency, [[https://devcenter.heroku.com/articles/local-maven-dependencies|which is described nicely in this post]].
 
 == Algorithm Support == 
 All of the JOSE algorithms are fully implemented by jose4j. However, the library relies on the underlying cryptography provider in the Java Runtime Environment so, depending on the deployment environment, some algorithms may not be available at runtime. The tables below lists all the supported JWS/JWE/JWK algorithms and is annotated with some common JCA provider requirements.    
