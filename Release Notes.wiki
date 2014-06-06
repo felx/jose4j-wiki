@@ -35,7 +35,6 @@
 === jose4j-0.3.2 ===
 *JWK toJson now takes a parameter indicating the level of output to produce (i.e. public only, public+symmetric or public+symmetric+private) 
 * Improve awareness of handling of algorithm support in the underlying Java runtime
-
 * Add a simple OctJwkGenerator utility for generateing symmetric JWKs
 * Added some validation to check that the given key is appropriate for the indicated algorithm and give more helpful error messages when it's not
 
@@ -46,8 +45,8 @@
 
 === jose4j-0.3.0 ===
 Introduction of JWE support 
-* Content Encryption "enc" algoritms: A128CBC-HS256, A192CBC-HS384, A256CBC-HS512 
-* Key Management "alg" algoritms: ECDH-ES, ECDH-ES+A128KW, ECDH-ES+A192KW, ECDH-ES+A256KW, RSA-OAEP, RSA1_5, A128KW, A192KW, A256KW, dir
+* Introduction of JWE support of Content Encryption "enc" algorithms: A128CBC-HS256, A192CBC-HS384, A256CBC-HS512 
+* JEW Key Management "alg" algorithms: ECDH-ES, ECDH-ES+A128KW, ECDH-ES+A192KW, ECDH-ES+A256KW, RSA-OAEP, RSA1_5, A128KW, A192KW, A256KW, dir
 
 
 ===  jose4j-0.2.7 ===
