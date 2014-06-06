@@ -1,3 +1,16 @@
+=== jose4j-0.3.6 ===
+* Added JWE support for RSAES OAEP using SHA-256 and MGF1 with SHA-256 key management (RSA-OAEP-256) which was added to draft -26 of JWA at the end of April '14  
+* Now published to the Central Maven Repository with a new groupId of org.bitbucket.b_c  
+{{{
+#!xml
+<dependency>
+  <groupId>org.bitbucket.b_c</groupId>
+  <artifactId>jose4j</artifactId>
+  <version>0.3.6</version>
+</dependency>
+}}}
+
+
 
 === jose4j-0.3.5 ===
 * Added JWE support for AES GCM content encryption (A128GCM, A192GCM & A256GCM)
