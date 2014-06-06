@@ -48,6 +48,8 @@ Additional and more detailed examples and explanations are available:
 
 * [[JWE%20Examples|JWE Examples]] shows how to encrypt and decrypt messages.
 
+* A [[http://www.slideshare.net/briandavidcampbell/jose-can-you-see-34360871|presentation I did at IIW 18]] has some code examples along with some expiation of JOSE and JWT. 
+
 
 == Algorithm Support == 
 All of the JOSE algorithms are fully implemented by jose4j. However, the library relies on the underlying cryptography provider in the Java Runtime Environment so, depending on the deployment environment, some algorithms may not be available at runtime. The tables below lists all the supported JWS/JWE/JWK algorithms and is annotated with some common JCA provider requirements.    
