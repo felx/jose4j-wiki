@@ -11,7 +11,6 @@
 }}}
 
 
-
 === jose4j-0.3.5 ===
 * Added JWE support for AES GCM content encryption (A128GCM, A192GCM & A256GCM)
 * Added JWE support for AES GCM key encryption (A128GCMKW, A192GCMKW & A256GCMKW)
@@ -26,10 +25,12 @@
 * **Breaking change**: by default JsonWebSignature will not accept a Plaintext JWS (i.e. "alg":"none"). Applications can use setAlgorithmConstraints(AlgorithmConstraints.NO_CONSTRAINTS) on JsonWebSignature to indicate that a Plaintext JWS is acceptable. 
 * addSeconds(...) on IntDate now takes a long rather than an int
 
+
 === jose4j-0.3.3 ===
 * JsonWebStructure now has a fromCompactSerialization(...) and get/setPayload(...), which allows for client code to treat JWS/JWE more similarly in some cases
 * As a result of the above, JsonWebSignature.getPayload() now checks the signature and throws an exception, if it's not valid. JsonWebSignature.getUnverifiedPayload() can be used to access the payload without the signature check .
 * Some defect fixes and clean up
+
 
 === jose4j-0.3.2 ===
 *JWK toJson now takes a parameter indicating the level of output to produce (i.e. public only, public+symmetric or public+symmetric+private) 
@@ -40,25 +41,28 @@
 
 
 === jose4j-0.3.1 ===
-update KDF for ECDH-ES key agreement per change in JWA -16 where the AlgorithmID value now has a length prefix  (http://www.ietf.org/mail-archive/web/jose/current/msg03460.html)
+* update KDF for ECDH-ES key agreement per change in JWA -16 where the AlgorithmID value now has a length prefix  (http://www.ietf.org/mail-archive/web/jose/current/msg03460.html)
+
 
 === jose4j-0.3.0 ===
 Introduction of JWE support 
 * Content Encryption "enc" algoritms: A128CBC-HS256, A192CBC-HS384, A256CBC-HS512 
 * Key Management "alg" algoritms: ECDH-ES, ECDH-ES+A128KW, ECDH-ES+A192KW, ECDH-ES+A256KW, RSA-OAEP, RSA1_5, A128KW, A192KW, A256KW, dir
 
+
 ===  jose4j-0.2.7 ===
-Added private and symmetric key support in JWK
-Added utilities to generate EC and RSA JWKs
+* Added private and symmetric key support in JWK
+* Added utilities to generate EC and RSA JWKs
+
 
 === jose4j-0.2.0 ===
-Added EC "kty" JWK support \\
-Added Elliptic Curve support for JWS 
-* Algoritms "alg": ES256, ES384, ES512
+* Added EC "kty" JWK support \\
+* Added Elliptic Curve support for JWS with Algorithms "alg": ES256, ES384, ES512
+
 
 === jose4j-0.1.0 ===
-Introduction of JWK support (only RSA "kty" Key Type) \\
-Introduction of JWS support 
-* Algoritms "alg": none, HS256, HS384, HS512, RS256, RS384, RS512
+* Introduction of JWK support (only RSA "kty" Key Type) \\
+* Introduction of JWS support for Algorithms "alg": none, HS256, HS384, HS512, RS256, RS384, RS512
+
 
 Note: this is **not** a complete list of changes but rather just attempts to capture some of the more notable milestones and additions. 
