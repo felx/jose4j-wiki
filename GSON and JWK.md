@@ -1,6 +1,5 @@
 
 
-
 ```
 #!java
 
@@ -48,5 +47,5 @@ public class JwkSerializer implements JsonSerializer<JsonWebKey>
     Gson gson = new GsonBuilder()
             .registerTypeAdapter(JsonWebKey.class, new JwkDeserializer())
             .registerTypeAdapter(JsonWebKey.class, new JwkSerializer())
-            .setPrettyPrinting().create();
+            .create();
 ```
