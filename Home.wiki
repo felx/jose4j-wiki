@@ -13,7 +13,7 @@ The jose4j library is available in the Maven Central Repository. To use it in yo
   <dependency>
     <groupId>org.bitbucket.b_c</groupId>
     <artifactId>jose4j</artifactId>
-    <version>0.3.6</version>
+    <version>0.3.7</version>
   </dependency>
 }}}
 
@@ -106,4 +106,4 @@ These rough [[Release%20Notes|Release Notes]] capture some of the high level mil
 == Dependencies ==
 Jose4j is compiled with/for Java 7 and will also run on Java 8.
 
-The jose.4.j library relies on Codec and Logging from [[http://commons.apache.org/|Apache Commons]] as well as [[https://code.google.com/p/json-simple/|JSON-Simple]]. Attempts have been made to keep the dependencies list as short as possible but it seemed like a bad idea to try and write a base 64 encoder, a logging framework and a JSON parser when so many good implementations of those things already exist. 
+The jose.4.j library relies on Commons Logging from [[http://commons.apache.org/|Apache Commons]]. Attempts have been made to keep the dependencies list as short as possible but it seemed like a bad idea to try and write a logging framework.
