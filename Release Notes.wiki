@@ -1,4 +1,4 @@
-=== jose4j-0.3.6 ===
+=== jose4j-0.3.6 - June 6, 2014 ===
 * Added JWE support for RSAES OAEP using SHA-256 and MGF1 with SHA-256 key management (RSA-OAEP-256) which was added to draft -26 of JWA at the end of April '14  
 * Now published to the Central Maven Repository with a new groupId of org.bitbucket.b_c  
 {{{
@@ -11,7 +11,7 @@
 }}}
 
 
-=== jose4j-0.3.5 ===
+=== jose4j-0.3.5 - April 22, 2014 ===
 * Added JWE support for AES GCM content encryption (A128GCM, A192GCM & A256GCM)
 * Added JWE support for AES GCM key encryption (A128GCMKW, A192GCMKW & A256GCMKW)
 * Added JWE support for PBES2 Key Encryption (PBES2-HS256+A128KW, PBES2-HS384+A192KW & PBES2-HS512+A256KW)
@@ -20,46 +20,46 @@
 * Fixed issue #003 where the A256GCM implementation used the wrong algorithm identifier
  
 
-=== jose4j-0.3.4 ===
+=== jose4j-0.3.4 - November 25, 2013 ===
 * JWS/JWE objects now have the ability to whitelist or blacklist the algorithms that will be accepted
 * **Breaking change**: by default JsonWebSignature will not accept a Plaintext JWS (i.e. "alg":"none"). Applications can use setAlgorithmConstraints(AlgorithmConstraints.NO_CONSTRAINTS) on JsonWebSignature to indicate that a Plaintext JWS is acceptable. 
 * addSeconds(...) on IntDate now takes a long rather than an int
 
 
-=== jose4j-0.3.3 ===
+=== jose4j-0.3.3 - October 22, 2013 ===
 * JsonWebStructure now has a fromCompactSerialization(...) and get/setPayload(...), which allows for client code to treat JWS/JWE more similarly in some cases
 * As a result of the above, JsonWebSignature.getPayload() now checks the signature and throws an exception, if it's not valid. JsonWebSignature.getUnverifiedPayload() can be used to access the payload without the signature check .
 * Some defect fixes and clean up
 
 
-=== jose4j-0.3.2 ===
+=== jose4j-0.3.2  - October 17, 2013===
 *JWK toJson now takes a parameter indicating the level of output to produce (i.e. public only, public+symmetric or public+symmetric+private) 
 * Improve awareness of handling of algorithm support in the underlying Java runtime
 * Add a simple OctJwkGenerator utility for generateing symmetric JWKs
 * Added some validation to check that the given key is appropriate for the indicated algorithm and give more helpful error messages when it's not
 
 
-=== jose4j-0.3.1 ===
+=== jose4j-0.3.1 - September 16, 2013 ===
 * update KDF for ECDH-ES key agreement per change in JWA -16 where the AlgorithmID value now has a length prefix  (http://www.ietf.org/mail-archive/web/jose/current/msg03460.html)
 
 
-=== jose4j-0.3.0 ===
+=== jose4j-0.3.0 - August 23, 2013 ===
 Introduction of JWE support 
 * Introduction of JWE support of Content Encryption "enc" algorithms: A128CBC-HS256, A192CBC-HS384, A256CBC-HS512 
 * JEW Key Management "alg" algorithms: ECDH-ES, ECDH-ES+A128KW, ECDH-ES+A192KW, ECDH-ES+A256KW, RSA-OAEP, RSA1_5, A128KW, A192KW, A256KW, dir
 
 
-===  jose4j-0.2.7 ===
+===  jose4j-0.2.7 - July 19, 2013 ===
 * Added private and symmetric key support in JWK
 * Added utilities to generate EC and RSA JWKs
 
 
-=== jose4j-0.2.0 ===
+=== jose4j-0.2.0 - January 8, 2013===
 * Added EC "kty" JWK support \\
 * Added Elliptic Curve support for JWS with Algorithms "alg": ES256, ES384, ES512
 
 
-=== jose4j-0.1.0 ===
+=== jose4j-0.1.0  - October 31, 2012 ==
 * Introduction of JWK support (only RSA "kty" Key Type) \\
 * Introduction of JWS support for Algorithms "alg": none, HS256, HS384, HS512, RS256, RS384, RS512
 
