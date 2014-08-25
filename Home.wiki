@@ -106,4 +106,6 @@ These rough [[Release%20Notes|Release Notes]] capture some of the high level mil
 == Dependencies ==
 Jose4j is compiled with/for Java 7 and will also run on Java 8.
 
-The jose.4.j library relies on Commons Logging from [[http://commons.apache.org/|Apache Commons]]. Attempts have been made to keep the dependencies list as short as possible but it seemed like a bad idea to try and write a logging framework.
+The jose.4.j library relies on [[http://commons.apache.org/proper/commons-logging/|Appache Commons Logging]]. Attempts have been made to keep the dependencies list as short as possible but it seemed like a bad idea to try and write a logging framework.
+
+Jose4j's JSON processing was derived from the [[https://code.google.com/p/json-simple/|JSON.simple toolkit]] and Base64 encoding/decoding was derived from the [[http://commons.apache.org/proper/commons-codec/|Apache Commons Codec]] project. 
