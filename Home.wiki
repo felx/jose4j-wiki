@@ -108,4 +108,4 @@ Jose4j is compiled with/for Java 7 and will also run on Java 8.
 
 The jose.4.j library relies on [[http://commons.apache.org/proper/commons-logging/|Appache Commons Logging]]. 
 
-Jose4j's JSON processing was derived from the [[https://code.google.com/p/json-simple/|JSON.simple toolkit]] and Base64 encoding/decoding was derived from the [[http://commons.apache.org/proper/commons-codec/|Apache Commons Codec]] project. 
+As of v0.3.7 jose4j's JSON processing was derived from the [[https://code.google.com/p/json-simple/|JSON.simple toolkit]] and Base64 encoding/decoding was derived from the [[http://commons.apache.org/proper/commons-codec/|Apache Commons Codec]] project. 
