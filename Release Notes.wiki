@@ -47,7 +47,7 @@
 
 === jose4j-0.3.3 - October 22, 2013 ===
 * JsonWebStructure now has a fromCompactSerialization(...) and get/setPayload(...), which allows for client code to treat JWS/JWE more similarly in some cases
-* As a result of the above, JsonWebSignature.getPayload() now checks the signature and throws an exception, if it's not valid. JsonWebSignature.getUnverifiedPayload() can be used to access the payload without the signature check .
+* As a result of the above, JsonWebSignature.getPayload() now checks the signature and throws an exception, if it's not valid. JsonWebSignature.getUnverifiedPayload() can be used to access the payload without the signature check. This is potentially a **breaking change** at runtime for some usage of the getPayload() method.
 * Some defect fixes and clean up
 
 
