@@ -42,7 +42,7 @@
 === jose4j-0.3.4 - November 25, 2013 ===
 * JWS/JWE objects now have the ability to whitelist or blacklist the algorithms that will be accepted
 * **Breaking change**: by default JsonWebSignature will not accept a Plaintext JWS (i.e. "alg":"none"). Applications can use setAlgorithmConstraints(AlgorithmConstraints.NO_CONSTRAINTS) on JsonWebSignature to indicate that a Plaintext JWS is acceptable. 
-* addSeconds(...) on IntDate now takes a long rather than an int (this was unfortunately a **breaking change** at runtime for code compiled against earlier versions but run against 0.3.4 - compile time is fine)
+* addSeconds(...) on IntDate now takes a long rather than an int (this was unfortunately a **breaking change** for code compiled against earlier versions but run against 0.3.4 - compile time is fine)
 
 
 === jose4j-0.3.3 - October 22, 2013 ===
