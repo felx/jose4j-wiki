@@ -1,3 +1,16 @@
+=== jose4j-0.3.8 - September 5, 2014 ===
+* Add a system property check that will enable JsonWebSignature to allow the getPayload() method to be called without validating the signature to help support code written agains versions prior to v0.3.3 but running with newer versions. Setting org.jose4j.jws.getPayload-skip-verify=true will make the JsonWebSignature getPayload() method behave as it did prior to v0.3.3, which is to simply return the payload without attempting to verify the signature or throwing an exception.
+* Published to the Central Maven Repository
+{{{
+#!xml
+<dependency>
+  <groupId>org.bitbucket.b_c</groupId>
+  <artifactId>jose4j</artifactId>
+  <version>0.3.8</version>
+</dependency>
+}}}
+
+
 === jose4j-0.3.7 - August 25, 2014 ===
 * JSON processing code derived from the JSON.simple toolkit pulled directly into the jose4j source code to reduce dependancies and enable modifications to the JSON code (forward slashes no longer escaped and some minor efficiency improvements)
 * Base64 code derived from the Apache Commons Codec project pulled directly into the jose4j source code to reduce dependancies and ensure that the requisite implementation is always available
