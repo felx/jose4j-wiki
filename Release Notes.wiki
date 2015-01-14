@@ -11,7 +11,7 @@
 * Put back the addSeconds(int) method on IntDate so now there’s both addSeconds(int) and addSeconds(long) - code that was compiled against the int version (using v0.2.7 for example) wouldn’t run against v0.3.4 and would give java.lang.NoSuchMethodError: org.jose4j.jwt.IntDate.addSeconds(I)V
 * Add a system property that will enable JsonWebSignature to allow the 'none' algorithm by default to help support code written agains versions prior to 0.3.4 but running with newer versions. Setting org.jose4j.jws.default-allow-none=true will allow JsonWebSignature to use the none alg without explicitly setting AlgorithmConstraints.NO_CONSTRAINTS
 * Add CompactSerialization class back (it had been renamed to CompactSerializer in v0.3.0)
-* The x5c JWK parameter is now properly PEM encoded with 64 printable characters per line and \r\n as line break rather rather than just base64 encoding the DER with no chunking/line separation
+* The x5c JWK parameter is now PEM encoded with 64 printable characters per line and \r\n as line break rather rather than just base64 encoding the DER with no chunking/line separation
 * Expand the range of commons-logging dependency
 
 
