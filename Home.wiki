@@ -46,6 +46,8 @@ Additional and more detailed examples and explanations are available:
 
 * [[JWT%20Examples|JWT Examples]] shows how to produce and consume JSON Web Tokens.
 
+* [[JWS%20Examples|JWS Examples]] shows how to easily apply and verify signatures.
+
 * [[JWE%20Examples|JWE Examples]] shows how to encrypt and decrypt messages.
 
 * [[GSON%20and%20JWK|GSON serialization/deserialization of JWK objects]]
