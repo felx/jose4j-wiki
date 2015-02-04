@@ -23,6 +23,8 @@
     claims.setNotBeforeMinutesInThePast(2); // time before which the token is not yet valid (2 minutes ago)
     claims.setSubject("subject"); // the subject/principal is whom the token is about
     claims.setClaim("email","mail@example.com"); // additional claims/attributes about the subject can be added
+    List<String> groups = Arrays.asList("group-one", "other-group", "group-three");
+    claims.setStringListClaim("groups", groups); // multi-valued claims work too and will end up as a JSON array
 
     // A JWT is a JWS and/or a JWE with JSON claims as the payload.
     // In this example it is a JWS so we create a JsonWebSignature object.
