@@ -86,7 +86,11 @@
         System.out.println("Invalid JWT! " + e);
     }
 
+```
 
+
+```
+#!java
     // In the example above we generated a key pair and used it directly for signing and verification.
     // Key exchange in the real word, however, is rarely so simple.
     // A common pattern that's emerging is for an issuer to publish its public keys
@@ -116,6 +120,13 @@
             .build();
 
 
+
+```
+
+
+```
+#!java
+
     // There's also a key resolver that selects from among a given list of JWKs using the Key ID
     // and other factors provided in the header of the JWS/JWT.
     JsonWebKeySet jsonWebKeySet = new JsonWebKeySet(rsaJsonWebKey);
@@ -127,6 +138,12 @@
             .build();
 
 
+
+```
+
+
+```
+#!java
     // Sometimes X509 certificate(s) are provided out-of-band somehow by the signer/issuer
     // and the X509VerificationKeyResolver is helpful for that situation. It will use
     // the X.509 Certificate Thumbprint Headers (x5t or x5t#S256) from the JWS/JWT to
@@ -185,5 +202,7 @@
     // Note that on the producing side, the X.509 Certificate Thumbprint Header
     // can be set like this on the JWS (which is the JWT)
     jws.setX509CertSha1ThumbprintHeaderValue(certificate);
+
+
 
 ```
