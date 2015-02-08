@@ -1,4 +1,4 @@
-The code snippets below show how a custom GSON JsonSerializer and JsonDeserializer can be used to properly serialize/deserialize JsonWebKey objects that are part of a larger object tree.    
+The code snippets below show how a custom GSON (with GSON v2.x) JsonSerializer and JsonDeserializer can be used to properly serialize/deserialize JsonWebKey objects that are part of a larger object tree.     
 
 ```
 #!java
