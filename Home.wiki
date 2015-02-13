@@ -117,4 +117,4 @@ As of v0.3.7 jose4j's JSON processing was derived from the [[https://code.google
 == Acknowledgments ==
 I'd like to thank Dan McNulty, Jason Musgrave and Guoping Liu for feedback and suggestions (please let me know if you deserve acknowledgment but I've somehow forgotten you).
 
-I'd also like to thank my employer, Ping Identity.  I'd like to think Ping benefits from this work. But I know for sure none of it would have been possible without Ping. 
+I'd also like to thank my employer, Ping Identity.  I'd like to think Ping benefits from this work. But I know for sure none of it would have happened without Ping. 
