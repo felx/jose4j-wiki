@@ -1,5 +1,8 @@
 === jose4j-0.4.0 - February 13, 2015 ===
-* 
+* Introduced extensive new support for producing, consuming and validating JSON Web Tokens (JWT)
+* New and improved JWK filtering/searching capabilities 
+* Added support for easily obtaining (and cacheing) JWKs from an HTTPS endpoint
+* x5c is (again) just base64 encoded DER with no chunking/line separation 
 
 === jose4j-0.3.9 - November 19, 2014 ===
 * Fix #007 where a runtime exception was being thrown from an HSM backed provider during initialization - algorithm availability checking now better handles runtime exceptions. 
