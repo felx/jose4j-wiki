@@ -117,4 +117,4 @@ As of v0.3.7 jose4j's JSON processing was derived from the [[https://code.google
 == Acknowledgments ==
 I'd like to thank Dan McNulty, Dmitry Vsekhvalnov, Guoping Liu, Jason Musgrave, John Bradley and Tim McLean for feedback and suggestions (please let me know if you deserve acknowledgment but I've somehow forgotten you).
 
-I'd also like to thank my employer, [[Ping Identity|https://www.pingidentity.com]].  I'd like to think that Ping benefits from this work (the library is used extensively in Ping's products). But I know for sure none of it would have happened without Ping. 
+I'd also like to thank my employer, [[https://www.pingidentity.com|Ping Identity]].  I'd like to think that Ping benefits from this work (the library is used extensively in Ping's products). But I know for sure none of it would have happened without Ping. 
