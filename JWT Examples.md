@@ -89,6 +89,8 @@ Code showing simple generation and consumption of a JWT
 
 ```
 
+
+
 If the JWT Issuer has their public keys at a HTTPS JWKS endpoint
 ```
 #!java
@@ -124,6 +126,8 @@ If the JWT Issuer has their public keys at a HTTPS JWKS endpoint
 
 ```
 
+
+
 Or you got some JWKs out-of-band from the JWT Issuer. 
 ```
 #!java
@@ -141,6 +145,8 @@ Or you got some JWKs out-of-band from the JWT Issuer.
 
 
 ```
+
+
 
 X.509 Certificates? No problem, there's a Resolver for that too.
 ```
