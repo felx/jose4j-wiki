@@ -1,5 +1,6 @@
 ## JSON Web Token (JWT) Code Examples ##
 
+Code showing simple generation and consumption of a JWT 
 ```
 #!java
     //
@@ -88,7 +89,7 @@
 
 ```
 
-
+If the JWT Issuer has their public keys at a HTTPS JWKS endpoint
 ```
 #!java
     // In the example above we generated a key pair and used it directly for signing and verification.
@@ -123,7 +124,7 @@
 
 ```
 
-
+Or you got some JWKs out-of-band from the JWT Issuer. 
 ```
 #!java
 
@@ -141,7 +142,7 @@
 
 ```
 
-
+X.509 Certificates? No problem, there's a Resolver for that too.
 ```
 #!java
     // Sometimes X509 certificate(s) are provided out-of-band somehow by the signer/issuer
