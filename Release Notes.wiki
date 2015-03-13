@@ -1,5 +1,5 @@
 === jose4j-0.4.1 - March 12, 2015 ===
-* Additions to the APIs for consuming and validating JSON Web Tokens (JWT) which make it easier and more efficient to do a two pass validation, which can be useful when you need some info from inside the JWT (i.e. the issuer) in order to set up the validation policy
+* Additions to the APIs for consuming and validating JSON Web Tokens (JWT) which make it easier and more efficient to do a two-pass validation, which can be useful when you need some info from inside the JWT (i.e. the issuer) in order to set up the validation policy
 * Fix #008 where DirectKeyManagementAlgorithm was retuning ASYMMETRIC Key Persuasion rather than SYMMETRIC
 * Fix #009 where DirectKeyManagementAlgorithm was retuning null Key Type rather than "oct"
 * Fix #010 where the AesKeyWrapManagementAlgorithm and AesGcmKeyEncryptionAlgorithm algorithms were using "AES" for Key Type rather than "oct"
