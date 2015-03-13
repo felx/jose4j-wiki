@@ -217,7 +217,7 @@ X.509 Certificates? No problem, there's a Resolver for that too.
 
 ```
 
-## Two-pass JWT consumption
+### Two-pass JWT consumption
 
 ```
 #!java
