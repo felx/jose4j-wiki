@@ -213,3 +213,48 @@ X.509 Certificates? No problem, there's a Resolver for that too.
 
 
 ```
+
+
+
+```
+#!java
+
+    // In some cases you won't have enough information to set up your JWT consumer without cracking open
+    // the JWT first. For example, in some contexts you might not know who issued the token without looking
+    // at the "iss" claim inside the JWT.
+    // This can be done efficiently and relatively easily using two JwtConsumers in a "two-pass" validation
+    // of sorts - the first JwtConsumer parses the JWT and the second one does the actual validation.
+
+    // Build a JwtConsumer that doesn't check signatures or do any validation.
+    JwtConsumer firstPassJwtConsumer = new JwtConsumerBuilder()
+            .setSkipAllValidators()
+            .setDisableRequireSignature()
+            .setSkipSignatureVerification()
+            .build();
+
+    //The first JwtConsumer is basically just used to parse the JWT into a JwtContext object.
+    JwtContext jwtContext = firstPassJwtConsumer.process(jwt);
+
+    // From the JwtContext we can get the issuer, or whatever else we might need,
+    // to lookup or figure out the kind of validation policy to apply
+    String issuer = jwtContext.getJwtClaims().getIssuer();
+
+    // Just using the same key here but you might, for example, have a JWKS URIs configured for
+    // each issuer, which you'd use to set up a HttpsJwksVerificationKeyResolver
+    Key verificationKey = rsaJsonWebKey.getKey();
+
+    // Using info from the JwtContext, this JwtConsumer is set up to verify
+    // the signature and validate the claims.
+    JwtConsumer secondPassJwtConsumer = new JwtConsumerBuilder()
+            .setExpectedIssuer(issuer)
+            .setVerificationKey(verificationKey)
+            .setRequireExpirationTime()
+            .setAllowedClockSkewInSeconds(30)
+            .setRequireSubject()
+            .setExpectedAudience("Audience")
+            .build();
+
+    // Finally using the second JwtConsumer to actually validate the JWT. This operates on
+    // the JwtContext from the first processing pass, which avoids redundant parsing/processing.
+    secondPassJwtConsumer.processContext(jwtContext);
+```
