@@ -1,3 +1,4 @@
+[TOC]
 ## JSON Web Token (JWT) Code Examples ##
 
 ### Code showing simple generation and consumption of a JWT 
