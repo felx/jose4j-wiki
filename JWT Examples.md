@@ -93,7 +93,7 @@ And example showing simple generation and consumption of a JWT
 ```
 
 
-### HTTPS JWKS endpoint
+### Using an HTTPS JWKS endpoint
 If the JWT Issuer has their public keys at a HTTPS JWKS endpoint
 ```
 #!java
@@ -130,7 +130,7 @@ If the JWT Issuer has their public keys at a HTTPS JWKS endpoint
 ```
 
 
-### JWKs
+### Using JWKs
 Or you got some JWKs out-of-band from the JWT Issuer. 
 ```
 #!java
@@ -218,7 +218,7 @@ X.509 Certificates? No problem, there's a Resolver for that too.
 ```
 
 ### Two-pass JWT consumption
-
+Sometimes you'll need to crack open the JWT in order to know who issued it and how to validate it, which can be done efficiently and relatively easily using a two-pass consumption approach. 
 ```
 #!java
 
