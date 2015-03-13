@@ -1,6 +1,6 @@
 ## JSON Web Token (JWT) Code Examples ##
 
-Code showing simple generation and consumption of a JWT 
+### Code showing simple generation and consumption of a JWT 
 ```
 #!java
     //
@@ -214,7 +214,7 @@ X.509 Certificates? No problem, there's a Resolver for that too.
 
 ```
 
-## Two-pass <a id="2-pass"></a>
+## Two-pass 
 
 ```
 #!java
