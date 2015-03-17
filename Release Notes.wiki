@@ -6,6 +6,7 @@
 * Fix #011 where HmacUsingShaAlgorithm was using "HMAC" Key Type rather than "oct" 
 * Fix #012 where the [HTTP] Get setTrustedCertificates(...) didn't work properly when more than one trusted certificate is given
 *Added an optional and controllable limit to the number of characters that [HTTP] Get will read from the HTTP response body
+* Introduced a JwksDecryptionKeyResolver that will chose a key management key for decryption from a given list of JWKs using the content of the JWE header (mainly kid and x5t etc)
 
 === jose4j-0.4.0 - February 13, 2015 ===
 * Introduced extensive new support for producing, consuming and validating JSON Web Tokens (JWT)
