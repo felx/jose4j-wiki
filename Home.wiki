@@ -20,9 +20,8 @@ The jose4j library is available in the Maven Central Repository. To use it in yo
 }}}
 
 javadocs can be found at 
-{{{
 [[http://www.javadoc.io/doc/org.bitbucket.b_c/jose4j/0.4.1|http://www.javadoc.io/doc/org.bitbucket.b_c/jose4j/0.4.1]]
-}}}
+
 
 Dependency coordinate information for a number of other systems is available on the [[http://search.maven.org/#artifactdetails%7Corg.bitbucket.b_c%7Cjose4j%7C0.4.1%7Cjar|artifact details]] at central and compiled jars are also available on the [[../downloads|downloads page]].
 
