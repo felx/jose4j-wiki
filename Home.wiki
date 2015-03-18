@@ -19,10 +19,6 @@ The jose4j library is available in the Maven Central Repository. To use it in yo
   </dependency>
 }}}
 
-javadocs can be found at 
-[[www.javadoc.io/doc/org.bitbucket.b_c/jose4j/0.4.1|www.javadoc.io/doc/org.bitbucket.b_c/jose4j/0.4.1]]
-
-
 Dependency coordinate information for a number of other systems is available on the [[http://search.maven.org/#artifactdetails%7Corg.bitbucket.b_c%7Cjose4j%7C0.4.1%7Cjar|artifact details]] at central and compiled jars are also available on the [[../downloads|downloads page]].
 
 == Code Examples ==
@@ -60,6 +56,7 @@ Additional and more detailed examples and explanations are available:
 
 * A [[http://www.slideshare.net/briandavidcampbell/jose-can-you-see-34360871|presentation at IIW 18]] and [[http://www.slideshare.net/briandavidcampbell/i-left-my-jwt-in-san-jose|a similar one at CIS 2014]] have some code examples along with some general information about JOSE and JWT. 
 
+* Javadocs are online [[http://www.javadoc.io/doc/org.bitbucket.b_c/jose4j/|here at javadoc.io]] though they are currently rather sparse on actual documentation 
 
 == Algorithm Support == 
 All of the JOSE algorithms are fully implemented by jose4j. However, the library relies on the underlying cryptography provider in the Java Runtime Environment so, depending on the deployment environment, some algorithms may not be available at runtime. The tables below lists all the supported JWS/JWE/JWK algorithms and is annotated with some common JCA provider requirements.    
