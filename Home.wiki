@@ -58,6 +58,8 @@ Additional and more detailed examples and explanations are available:
 
 * Javadocs are online [[http://www.javadoc.io/doc/org.bitbucket.b_c/jose4j/|here at javadoc.io]] though they are currently rather sparse on actual documentation 
 
+* [[04-01-15-Transparency|Response and analysis to some potential JWT vulnerabilities]] has some (maybe) useful info on using AlgorithmConstraints to specify what algorithms are allowed per JOSE or JWT object
+
 == Algorithm Support == 
 All of the JOSE algorithms are fully implemented by jose4j. However, the library relies on the underlying cryptography provider in the Java Runtime Environment so, depending on the deployment environment, some algorithms may not be available at runtime. The tables below lists all the supported JWS/JWE/JWK algorithms and is annotated with some common JCA provider requirements.    
 
