@@ -1,4 +1,4 @@
-Recently (March '15) some [vulnerabilities were discovered/reported in some JWT/JWS libraries](https://auth0.com/blog/2015/03/31/critical-vulnerabilities-in-json-web-token-libraries/). Tim McLean, the guy who did the research, contacted me a few weeks ago with his early findings and suggested I look into things in the jose4j JOSE and JWT library. In the interest of transparency, and because there's some potentially useful info in it, I'm posting his email and my response and analysis here:
+Recently (March '15) some [vulnerabilities were discovered/reported in some JWT/JWS libraries](https://auth0.com/blog/2015/03/31/critical-vulnerabilities-in-json-web-token-libraries/). Tim McLean, [the guy who did the research](https://www.timmclean.net/2015/03/31/jwt-algorithm-confusion.html), contacted me a few weeks ago with his early findings and suggested I look into things in the jose4j JOSE and JWT library. In the interest of transparency, and because there's some potentially useful info in it, I'm posting his email and my response and analysis here:
 
 
 **On Wed, Mar 11, 2015 at 10:28 AM, Brian Campbell <...> wrote:**
