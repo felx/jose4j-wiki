@@ -1,3 +1,13 @@
+=== jose4j-0.4.2 - May 26, 2015 ===
+* JwtConsumer[Builder] now can be told to relax validation of the verification or deception key, which will more easily allow for things like verification of JWTs signed with a 1024 bit RSA key (i.e. what Google is doing right now) or an HMAC key that is not the full 256 bits
+* Fix #019 with more granular options in skipping default JWT validation(s) and added the ability to specify an expected subject value 
+* Fix #022 where JSON serialization of a char array wasn't escaping special characters like quote, backslash, etc.
+* Fix #024 to no longer use StandardCharsets in StringUtil as it isn’t available on Android before API level 19
+* Fix #015 where CompactSerializer.serialize() no longer throws unnecessary JoseException
+* Fix #014 with a get/setContentTypeHeaderValue on JsonWebStructure as convenient way of dealing with the cty header
+ 
+
+
 === jose4j-0.4.1 - March 12, 2015 ===
 * Additions to the APIs for consuming and validating JSON Web Tokens (JWT) which make it easier and more efficient to do a two-pass validation, which can be useful when you need some info from inside the JWT (i.e. the issuer) in order to set up the validation policy
 * Fix #008 where DirectKeyManagementAlgorithm was retuning ASYMMETRIC Key Persuasion rather than SYMMETRIC
