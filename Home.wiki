@@ -2,9 +2,9 @@
 
 The jose.4.j library is an open source (Apache 2.0) implementation of JWT and the JOSE specification suite. It is written in Java and relies solely on the JCA APIs for cryptography.
 
-[[https://tools.ietf.org/html/draft-ietf-oauth-json-web-token|JSON Web Tokens]] (JWT) are a compact, URL-safe means of representing claims to be transferred between two parties. JWT is the identity token format in OpenID Connect and it is also widely used in OAuth 2.0 and many other contexts that require compact message security. 
+[[http://tools.ietf.org/html/rfc7519|JSON Web Tokens]] (JWT) are a compact, URL-safe means of representing claims to be transferred between two parties. JWT is the identity token format in OpenID Connect and it is also widely used in OAuth 2.0 and many other contexts that require compact message security. 
 
-JOSE is short for Javascript Object Signing and Encryption, which is the IETF Working Group that developed the [[http://tools.ietf.org/html/draft-ietf-jose-json-web-signature|JSON Web Signature]] (JWS), [[http://tools.ietf.org/html/draft-ietf-jose-json-web-encryption|JSON Web Encryption]] (JWE) and [[http://tools.ietf.org/html/draft-ietf-jose-json-web-key|JSON Web Key]] (JWK) specifications. JWS and JWE use JSON and base64url encoding to secure messages in a (relatively) simple, compact and web safe format while JWK defines a JSON representation of cryptographic keys. The actual algorithms for JWS, JWE and JWK are defined in [[http://tools.ietf.org/html/draft-ietf-jose-json-web-algorithms|JSON Web Algorithms]] (JWA).
+JOSE is short for Javascript Object Signing and Encryption, which is the IETF Working Group that developed the [[http://tools.ietf.org/html/rfc7515|JSON Web Signature]] (JWS), [[http://tools.ietf.org/html/rfc7516|JSON Web Encryption]] (JWE) and [[http://tools.ietf.org/html/rfc7517|JSON Web Key]] (JWK) specifications. JWS and JWE use JSON and base64url encoding to secure messages in a (relatively) simple, compact and web safe format while JWK defines a JSON representation of cryptographic keys. The actual algorithms for JWS, JWE and JWK are defined in [[http://tools.ietf.org/html/rfc7518|JSON Web Algorithms]] (JWA).
 
 The library supports the JWS/JWE compact serializations with the complete suite of JOSE algorithms. A more detailed breakdown is available below in the Algorithm Support section.
 
