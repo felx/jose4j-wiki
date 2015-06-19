@@ -1,3 +1,8 @@
+=== jose4j-0.4.3 - June 19, 2015 ===
+* Fix #028 with even more aggressive exception catching in initialization and checking algorithm availability so that a throwable/error doesn’t kill everything
+* Fix #025 so now if an explicit evaluation time isn’t given to the JwtConsumer[Builder], a JwtConsumer can be created once and used many times and in multiple threads
+ 
+
 === jose4j-0.4.2 - May 26, 2015 ===
 * JwtConsumer[Builder] now can be told to relax validation of the verification or deception key, which will more easily allow for things like verification of JWTs signed with a 1024 bit RSA key (i.e. what Google is doing right now) or an HMAC key that is not the full 256 bits
 * Address #019 with more granular options in skipping default JWT validation(s) and added the ability to specify an expected subject value 
