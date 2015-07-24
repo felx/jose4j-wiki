@@ -1,3 +1,6 @@
+=== jose4j-0.4.3 - July 24, 2015 ===
+* TBD
+
 === jose4j-0.4.3 - June 19, 2015 ===
 * Fix #028 with even more aggressive exception catching in initialization and checking algorithm availability so that a throwable/error doesn’t kill everything (enabling use on somewhat older Android versions)
 * Fix #025 so now if an explicit evaluation time isn’t given to the JwtConsumeBuilder, a JwtConsumer can be created once and used many times and in multiple threads
