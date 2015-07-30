@@ -1,3 +1,15 @@
+**Update** In July '15 it came to my attention that when used with the Bouncy Castle Java security provider the library was, in some conditions, potentially vulnerable to the algorithm substitution attack described as number 2 below where an HMAC JWS could be tricked into reporting a successful verify when the raw encoding of a public key was used as the secret key.
+
+The vulnerability does not manifest itself when using the default Sun/Oracle security provider.
+
+Version 0.4.4 fixes the potentially vulnerability by adding a strict type check on the key in `HmacUsingShaAlgorithm.verifySignature(...)`. Upgrading is recommended. 
+
+Other application level mitigations are also possible. Specifically using the key type of the JWS to be verified (`JsonWebSignature.getKeyType()`) as part of the criteria in choosing the verification key will thwart the attack. This can be done with a non null value for keyType when using `JsonWebKey.findJsonWebKey(String keyId, String keyType, String use, String algorithm)`. Furthermore, key type is always used as part of the key selection/resolution process by HttpsJwksVerificationKeyResolver, JwksVerificationKeyResolver, and VerificationJwkSelector so applications using any one of those to pick JWS verification keys are already protected. 
+
+
+
+** Original Content**
+
 Recently (March '15) some [vulnerabilities were discovered/reported in some JWT/JWS libraries](https://auth0.com/blog/2015/03/31/critical-vulnerabilities-in-json-web-token-libraries/). Tim McLean, [the guy who did the research](https://www.timmclean.net/2015/03/31/jwt-algorithm-confusion.html), contacted me a few weeks prior with his early findings and suggested I look into things in the jose4j JOSE and JWT library. In the interest of transparency, and because there's some potentially useful info in it, I'm posting his email and my response and analysis here:
 
 
