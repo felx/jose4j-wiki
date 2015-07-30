@@ -1,5 +1,8 @@
-=== jose4j-0.4.3 - July 24, 2015 ===
-* TBD
+=== jose4j-0.4.4 - July 24, 2015 ===
+* Fixed a potential security vulnerability where, when running with the Bouncy Castle (and presumably Spongy Castle) Java security provider, an HMAC JWS could be tricked into reporting a successful verify when the raw encoding of a public key was used as the secret key.  
+* Addressed Issue #18 - slf4j is now used rather than Commons Logging
+* Log levels of non critical messages lowered to debug 
+* Jar is now an OSGi bundle
 
 === jose4j-0.4.3 - June 19, 2015 ===
 * Fix #028 with even more aggressive exception catching in initialization and checking algorithm availability so that a throwable/error doesn’t kill everything (enabling use on somewhat older Android versions)
