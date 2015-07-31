@@ -108,7 +108,7 @@ All of the JOSE algorithms are fully implemented by jose4j. However, the library
 \\¶ Requires Java 8 or the Bouncy Castle JCA provider (or another provider which supports RSA/ECB/OAEPWithSHA-256AndMGF1Padding and an OAEPParameterSpec that indicates SHA-256 for MGF1) 
 
 == Release Notes == 
-These rough [[Release%20Notes|Release Notes]] capture some of the high level milestones.
+The [[Release%20Notes|Release Notes]] give a changelog of the project. 
 
 == Dependencies ==
 Jose4j is compiled with/for Java 7 and will also run on Java 8.
