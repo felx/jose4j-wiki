@@ -4,7 +4,7 @@ The vulnerability does not manifest itself when using the default Sun/Oracle sec
 
 Version 0.4.4 fixes the potentially vulnerability by adding a strict type check on the key in `HmacUsingShaAlgorithm.verifySignature(...)`. Upgrading is recommended. 
 
-Other application level mitigations are also possible. Specifically using the key type of the JWS to be verified (`JsonWebSignature.getKeyType()`) as part of the criteria in choosing the verification key will thwart the attack. This can be done with a non null value for keyType when using `JsonWebKey.findJsonWebKey(String keyId, String keyType, String use, String algorithm)`. Furthermore, key type is always used as part of the key selection/resolution process by HttpsJwksVerificationKeyResolver, JwksVerificationKeyResolver, and VerificationJwkSelector so applications using any one of those to pick JWS verification keys are already protected. 
+Other application level mitigations are also possible. Specifically using the key type of the JWS to be verified (`JsonWebSignature.getKeyType()`) as part of the criteria in choosing the verification key will thwart the attack. This can be done with a non null value for keyType when using `JsonWebKey.findJsonWebKey(String keyId, String keyType, String use, String algorithm)`. Furthermore, key type is always used as part of the key selection/resolution process by `HttpsJwksVerificationKeyResolver`, `JwksVerificationKeyResolver`, and `VerificationJwkSelector` so applications using any one of those to pick JWS verification keys are already protected. 
 
 
 
