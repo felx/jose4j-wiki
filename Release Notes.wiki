@@ -118,4 +118,4 @@ Introduction of JWE support
 * Introduction of JWS support for Algorithms "alg": none, HS256, HS384, HS512, RS256, RS384, RS512
 
 
-Note: this is **not** a complete list of changes but rather just attempts to capture some of the more notable milestones and additions. 
+Note: this is **not** necessarily a complete list of changes. The earlier releases just attempt to capture some of the more notable milestones and additions. More granular change lists are given for more recent releases.
