@@ -284,8 +284,8 @@ Sometimes you'll need to crack open the JWT in order to know who issued it and h
 
     // Create the Claims, which will be the content of the JWT
     JwtClaims claims = new JwtClaims();
-    claims.setIssuer("Issuer");  // who creates the token and signs it
-    claims.setAudience("Audience"); // to whom the token is intended to be sent
+    claims.setIssuer("sender");  // who creates the token and signs it
+    claims.setAudience("receiver"); // to whom the token is intended to be sent
     claims.setExpirationTimeMinutesInTheFuture(10); // time when the token will expire (10 minutes from now)
     claims.setGeneratedJwtId(); // a unique identifier for the token
     claims.setIssuedAtToNow();  // when the token was issued/created (now)
