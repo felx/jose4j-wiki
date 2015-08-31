@@ -60,6 +60,9 @@ Additional and more detailed examples and explanations are available:
 
 * [[04-01-15-Transparency|Response and analysis to some potential JWT vulnerabilities]] has some (maybe) useful info on using AlgorithmConstraints to specify what algorithms are allowed per JOSE or JWT object
 
+== Release Notes == 
+The [[Release%20Notes|Release Notes]] give a changelog of the project. 
+
 == Algorithm Support == 
 All of the JOSE algorithms are fully implemented by jose4j. However, the library relies on the underlying cryptography provider in the Java Runtime Environment so, depending on the deployment environment, some algorithms may not be available at runtime. The tables below lists all the supported JWS/JWE/JWK algorithms and is annotated with some common JCA provider requirements.    
 
@@ -106,9 +109,6 @@ All of the JOSE algorithms are fully implemented by jose4j. However, the library
 \\† Requires the [[https://www.bouncycastle.org/java.html|Bouncy Castle]] JCA provider (or another provider which supports RSASSA-PSS) 
 \\‡ Requires Java 8 or the Bouncy Castle v1.50+ JCA provider (or another provider which supports AEAD ciphers though the JCA interface including recognizing GCMParameterSpec)
 \\¶ Requires Java 8 or the Bouncy Castle JCA provider (or another provider which supports RSA/ECB/OAEPWithSHA-256AndMGF1Padding and an OAEPParameterSpec that indicates SHA-256 for MGF1) 
-
-== Release Notes == 
-The [[Release%20Notes|Release Notes]] give a changelog of the project. 
 
 == Dependencies ==
 Jose4j is compiled with/for Java 7 and will also run on Java 8.
