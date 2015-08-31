@@ -303,11 +303,11 @@ Sometimes you'll need to crack open the JWT in order to know who issued it and h
     // The payload of the JWS is JSON content of the JWT Claims
     jws.setPayload(claims.toJson());
 
-    // The JWT is signed using the private key
+    // The JWT is signed using the sender's private key
     jws.setKey(senderJwk.getPrivateKey());
 
     // Set the Key ID (kid) header because it's just the polite thing to do.
-    // We only have one key in this example but a using a Key ID helps
+    // We only have one signing key in this example but a using a Key ID helps
     // facilitate a smooth key rollover process
     jws.setKeyIdHeaderValue(senderJwk.getKeyId());
 
