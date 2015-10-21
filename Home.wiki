@@ -54,6 +54,8 @@ Additional and more detailed examples and explanations are available:
 
 * [[GSON%20and%20JWK|GSON serialization/deserialization of JWK objects]]
 
+* [[Jackson%20and%20JWK|Jackson serialization/deserialization of JWK objects]]
+
 * A [[http://www.slideshare.net/briandavidcampbell/jose-can-you-see-34360871|presentation at IIW 18]] and [[http://www.slideshare.net/briandavidcampbell/i-left-my-jwt-in-san-jose|a similar one at CIS 2014]] have some code examples along with some general information about JOSE and JWT. 
 
 * Javadocs are online [[http://www.javadoc.io/doc/org.bitbucket.b_c/jose4j/|here at javadoc.io]] though they are currently rather sparse on actual documentation 
