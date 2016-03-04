@@ -1,5 +1,5 @@
 === jose4j-0.5.0 - March 4, 2016 ===
-* Addressed #37 with some fairly rudimentary but useful support to PEM encoded public keys
+* Addressed #37 with some fairly rudimentary but useful support for PEM encoded public keys
 * Addressed #54 by enabling HttpsJwks.getJsonWebKeys() to continue to use the existing cache when an exception is thrown from refresh(). Default behavior is unchanged and setRetainCacheOnErrorDuration(...) must be called with a value larger than zero to get the new behavior.
 * Added support for RFC 7638 JWK thumbprints
 * Addressed #35 by allowing the caller of various JOSE and JWT functionality to specify a particular JCA provider by name for cryptographic operations
