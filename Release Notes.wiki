@@ -1,3 +1,18 @@
+=== jose4j-0.5.0 - March 4, 2016 ===
+* Addressed #37 with some fairly rudimentary but useful support to PEM encoded public keys
+* Addressed #54 by enabling HttpsJwks.getJsonWebKeys() to continue to use the existing cache when an exception is thrown from refresh(). Default behavior is unchanged and setRetainCacheOnErrorDuration(...) must be called with a value larger than zero to get the new behavior.
+* Added support for RFC 7638 JWK thumbprints
+* Addressed #35 by allowing the caller of various JOSE and JWT functionality to specify a particular JCA provider by name for cryptographic operations
+* Addressed #44 by providing a generic callback to JwtConsumer to customize each JWS/JWE
+* Addressed #43 now supports the 'crit' header
+* Fix ClassCastException with AndroidKeyStoreRSAPrivateKey on Android 6.0 Marshmallow 
+* Fix #46 by using the original encoded payload in signature verification rather than a re-encoding of the payload
+* Addressed #48 by providing a method for getting a JWS with detached content
+* Fix #38 by not logging secrets and other info from ConcatKeyDerivationFunction
+* Fix #39 - no more NPE by conditionally avoiding key length checks when raw secret key isn’t available because of non-extractable key data due to PKCS11/HSM provider
+
+
+
 === jose4j-0.4.4 - July 24, 2015 ===
 * Fixed a potential security vulnerability where, when running with the Bouncy Castle (and presumably Spongy Castle) Java security provider, an HMAC JWS could be tricked into reporting a successful verify when the raw encoding of a public key was used as the secret key (more detailed info can be found [[https://bitbucket.org/b_c/jose4j/wiki/04-01-15-Transparency|here]])
 * Addressed Issue #18 - slf4j is now used rather than Commons Logging
