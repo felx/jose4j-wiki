@@ -9,6 +9,7 @@
 * Fix #46 by using the original encoded payload in signature verification rather than a re-encoding of the payload
 * Addressed #48 by providing a method for getting a JWS with detached content
 * Fix #38 by not logging secrets and other info from ConcatKeyDerivationFunction
+* Fix #41 allowing users to specify arbitrary NumericDate values
 * Fix #39 - no more NPE by conditionally avoiding key length checks when raw secret key isn’t available because of non-extractable key data due to PKCS11/HSM provider
 
 
