@@ -58,7 +58,7 @@ Additional and more detailed examples and explanations are available:
 
 * A [[http://www.slideshare.net/briandavidcampbell/jose-can-you-see-34360871|presentation at IIW 18]] and [[http://www.slideshare.net/briandavidcampbell/i-left-my-jwt-in-san-jose|a similar one at CIS 2014]] have some code examples along with some general information about JOSE and JWT. 
 
-* Javadocs are online [[http://www.javadoc.io/doc/org.bitbucket.b_c/jose4j/|here at javadoc.io]] though they are currently rather sparse on actual documentation 
+* Javadocs are online [[http://www.javadoc.io/doc/org.bitbucket.b_c/jose4j/|here at javadoc.io]] though they are currently rather sparse on actual documentation (but getting better) 
 
 * [[04-01-15-Transparency|Response and analysis to some potential JWT vulnerabilities]] has some (maybe) useful info on using AlgorithmConstraints to specify what algorithms are allowed per JOSE or JWT object
 
