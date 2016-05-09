@@ -1,3 +1,9 @@
+=== jose4j-0.5.1 - May 9, 2016 ===
+* Addressed #65 so that the "class " prefix is not on the logger names of AlgorithmFactory
+* Addressed #63 with support for additional/arbitrary parameters in JWK 
+* Addressed #64 by adding key_ops to JWK
+* Addressed #58 by having JwtClaims getAudience() and getStringListClaimValue(name) return an empty list rather than null when the claim isn’t present
+
 === jose4j-0.5.0 - March 4, 2016 ===
 * Addressed #37 with some fairly rudimentary but useful support for PEM encoded public keys
 * Addressed #54 by enabling HttpsJwks.getJsonWebKeys() to continue to use the existing cache when an exception is thrown from refresh(). Default behavior is unchanged and setRetainCacheOnErrorDuration(...) must be called with a value larger than zero to get the new behavior.
