@@ -15,11 +15,11 @@ The jose4j library is available in the Maven Central Repository. To use it in yo
   <dependency>
     <groupId>org.bitbucket.b_c</groupId>
     <artifactId>jose4j</artifactId>
-    <version>0.5.0</version>
+    <version>0.5.1</version>
   </dependency>
 }}}
 
-Dependency coordinate information for a number of other systems is available on the [[http://search.maven.org/#artifactdetails%7Corg.bitbucket.b_c%7Cjose4j%7C0.5.0%7Cjar|artifact details]] at central and compiled jars are also available on the [[../downloads|downloads page]].
+Dependency coordinate information for a number of other systems is available on the [[http://search.maven.org/#artifactdetails%7Corg.bitbucket.b_c%7Cjose4j%7C0.5.1%7Cjar|artifact details]] at central and compiled jars are also available on the [[../downloads|downloads page]].
 
 == Code Examples ==
 jose.4.j is very easy to use and, to help get started, some code examples are provided demonstrating common things you might want to do with it.
@@ -58,7 +58,7 @@ Additional and more detailed examples and explanations are available:
 
 * A [[http://www.slideshare.net/briandavidcampbell/jose-can-you-see-34360871|presentation at IIW 18]] and [[http://www.slideshare.net/briandavidcampbell/i-left-my-jwt-in-san-jose|a similar one at CIS 2014]] have some code examples along with some general information about JOSE and JWT. 
 
-* Javadocs are online [[http://www.javadoc.io/doc/org.bitbucket.b_c/jose4j/|here at javadoc.io]] though they are currently rather sparse on actual documentation (but getting better) 
+* Javadocs are online [[http://www.javadoc.io/doc/org.bitbucket.b_c/jose4j/|here at javadoc.io]] though they are currently rather sparse on actual documentation (but getting better!) 
 
 * [[04-01-15-Transparency|Response and analysis to some potential JWT vulnerabilities]] has some (maybe) useful info on using AlgorithmConstraints to specify what algorithms are allowed per JOSE or JWT object
 
