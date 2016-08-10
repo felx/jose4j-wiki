@@ -1,3 +1,6 @@
+=== jose4j-0.5.2 - August 10, 2016 ===
+* Addressed #70 by allowing multiple acceptable/expected issuer values to be specified when building a JwtConsumer
+
 === jose4j-0.5.1 - May 9, 2016 ===
 * Addressed #65 so that the "class " prefix is not on the logger names of AlgorithmFactory
 * Addressed #63 with support for additional/arbitrary parameters in JWK 
