@@ -2,7 +2,7 @@
 
 The jose.4.j library is an open source (Apache 2.0) implementation of JWT and the JOSE specification suite. It is written in Java and relies solely on the JCA APIs for cryptography.
 
-[[http://tools.ietf.org/html/rfc7519|JSON Web Token]] (JWT) is a compact, URL-safe means of representing claims to be transferred between two parties. JWT is the identity token format in OpenID Connect and it is also widely used in OAuth 2.0 and many other contexts that require compact message security. 
+[[http://tools.ietf.org/html/rfc7519|JSON Web Token]] (JWT) is a compact, URL-safe means of representing claims to be transferred between two parties. JWT is the identity token format in OpenID Connect and it is also widely used in OAuth 2.0 and many other contexts that require compact message security. The [[JWT%20Examples|JWT Examples]] shows how to easily produce and consume JWTs using this library.
 
 JOSE is short for Javascript Object Signing and Encryption, which is the IETF Working Group that developed the [[http://tools.ietf.org/html/rfc7515|JSON Web Signature]] (JWS), [[http://tools.ietf.org/html/rfc7516|JSON Web Encryption]] (JWE) and [[http://tools.ietf.org/html/rfc7517|JSON Web Key]] (JWK) specifications. JWS and JWE use JSON and base64url encoding to secure messages in a (relatively) simple, compact and web safe format while JWK defines a JSON representation of cryptographic keys. The actual algorithms for JWS, JWE and JWK are defined in [[http://tools.ietf.org/html/rfc7518|JSON Web Algorithms]] (JWA).
 
