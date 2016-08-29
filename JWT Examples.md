@@ -218,6 +218,10 @@ X.509 Certificates? No problem, there's a Resolver for that too.
 
 ```
 
+### Something else? (X.509 Certificates at some HTTPS endpoint, maybe) 
+The key resolver functionality is extensible and customizable so you can plug in your own implantation of the VerificationKeyResolver interface to do whatever you need. For example, here's [a VerificationKeyResolver implementation designed to work with the "Key ID X.509 URL" that PingFederate provides](https://bitbucket.org/b_c/jose4j/issues/73/support-for-resolving-keys-from-a-https) in support of JWT access token validation.
+
+
 ### Two-pass JWT consumption
 Sometimes you'll need to crack open the JWT in order to know who issued it and how to validate it, which can be done efficiently and relatively easily using a two-pass consumption approach. 
 ```
