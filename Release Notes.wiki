@@ -1,7 +1,7 @@
 === jose4j-0.5.3 - December 7, 2016 ===
-* 
-*
-*
+* Addressed #80 where an NPE was being thrown from JWX.setKey() when using an HSM JCA provider
+* Addressed #77 'EC and RSA Key validations fail with Sun PKCS11 Provider' in the validate key checks by only checking RSA key length and EC curve parameters if the key is an instance of the type that has those methods.
+* Addressed #74 with support for HTTP Proxy servers by allowing org.jose4j.http.Get to be set up with a java.net.Proxy instance
 
 === jose4j-0.5.2 - August 10, 2016 ===
 * Addressed #70 by allowing multiple acceptable/expected issuer values to be specified when building a JwtConsumer
