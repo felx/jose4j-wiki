@@ -1,5 +1,5 @@
 === jose4j-0.5.5 - February 15, 20167 ===
-* Prior to ECDH key agreement consuming a JWE, now checks whether the ephemeral public key is on the private key's curve
+* Prior to ECDH key agreement when consuming a JWE, now checks whether the ephemeral public key is on the private key's curve
 * Addressed #84 algorithm constraint issue with JwtConsumer and some key resolvers
 
 
