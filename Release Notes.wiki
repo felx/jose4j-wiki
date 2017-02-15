@@ -1,3 +1,8 @@
+=== jose4j-0.5.5 - February 15, 20167 ===
+* before doing ECDH key agreement consuming a JWE, now checks whether the ephemeral public key is on the private key's curve
+* Addressed #84 algorithm constraint issue with JwtConsumer and some key resolvers
+
+
 === jose4j-0.5.4 - December 16, 2016 ===
 * Addressed #81 so a JWK parameter that is expected to be a String but is a different type will now result in a JoseException with a somewhat descriptive message rather than a ClassCastException
 
@@ -153,6 +158,3 @@ Introduction of JWE support
 
 
 Note: this is **not** necessarily a complete list of changes. The earlier releases just attempt to capture some of the more notable milestones and additions. More granular change lists are given for more recent releases.
-
-
-
