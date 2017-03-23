@@ -36,7 +36,7 @@ Actually read the spec https://tools.ietf.org/html/rfc7518 and write down why yo
 
 Here are some general security guidelines when using jose4j:
 * check all inputs. 
-** whatever you receive from the outside could be forged - so check that jose4j parameters make sense for your environment. If you have chosen e.g. one alg for some message but the received object uses another alg then bail out. Jose4j cannot do this check for you.
+** whatever you receive from the outside could be forged
 ** put length checks in place: Parameter too big or too small -> do not put it into jose4j but just bail out
 * Don't try to be helpful by returning explaining error messages.
 
