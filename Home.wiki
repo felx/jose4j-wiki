@@ -21,6 +21,26 @@ The jose4j library is available in the Maven Central Repository. To use it in yo
 
 Dependency coordinate information for a number of other systems is available on the [[http://search.maven.org/#artifactdetails%7Corg.bitbucket.b_c%7Cjose4j%7C0.5.5%7Cjar|artifact details]] at central and compiled jars are also available on the [[../downloads|downloads page]].
 
+== Security ==
+
+jose4j is a standards conform implementation of the JOSE working groups specification. You, the developer, can choose any of the provided signature and encryption algorithms. 
+
+Before doing so please evaluate whether your application is reinventing the wheel by e.g. re-implementing SSL on your application layer. Don't do that.
+
+First look for available standards for your application security and available implementations before mixing your own security protocol!
+
+In general get help from the experts when building web applications.
+Read e.g.: Read https://www.owasp.org/index.php/Input_Validation_Cheat_Sheet
+
+Actually read the spec https://tools.ietf.org/html/rfc7518 and write down why your choice of algorithm makes sense for your implementation.
+
+Here are some general security guidelines when using jose4j:
+* check all inputs. 
+** whatever you receive from the outside could be forged - so check that jose4j parameters make sense for your environment. If you have chosen e.g. one alg for some message but the received object uses another alg then bail out. Jose4j cannot do this check for you.
+** put length checks in place: Parameter too big or too small -> do not put it into jose4j but just bail out
+* Don't try to be helpful by returning explaining error messages.
+
+
 == Code Examples ==
 jose.4.j is very easy to use and, to help get started, some code examples are provided demonstrating common things you might want to do with it.
 
