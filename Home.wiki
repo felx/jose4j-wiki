@@ -23,7 +23,7 @@ Dependency coordinate information for a number of other systems is available on 
 
 == Security ==
 
-jose4j is a standards conform implementation of the JOSE working groups specification. You, the developer, can choose any of the provided signature and encryption algorithms. 
+jose4j is a standards conform implementation of the JOSE working group's specification. You, the developer, can choose any of the provided signature and encryption algorithms. 
 
 Before doing so please evaluate whether your application is reinventing the wheel by e.g. re-implementing SSL on your application layer. Don't do that.
 
