@@ -2,7 +2,9 @@
 
 The jose.4.j library is an open source (Apache 2.0) implementation of JWT and the JOSE specification suite. It is written in Java and relies solely on the JCA APIs for cryptography.
 
-[[http://tools.ietf.org/html/rfc7519|JSON Web Token]] (JWT) is a compact, URL-safe means of representing claims to be transferred between two parties. JWT is the identity token format in OpenID Connect and it is also widely used in OAuth 2.0 and many other contexts that require compact message security. The [[JWT%20Examples|JWT code examples page]] shows how to easily produce and consume JWTs using this library. 
+[[http://tools.ietf.org/html/rfc7519|JSON Web Token]] (JWT) is a compact, URL-safe means of representing claims to be transferred between two parties. JWT is the identity token format in OpenID Connect and it is also widely used in OAuth 2.0 and many other contexts that require compact message security. 
+
+The [[JWT%20Examples|JWT code examples page]] shows how to easily produce and consume JWTs using this library. 
 
 JOSE is short for Javascript Object Signing and Encryption, which is the IETF Working Group that developed the [[http://tools.ietf.org/html/rfc7515|JSON Web Signature]] (JWS), [[http://tools.ietf.org/html/rfc7516|JSON Web Encryption]] (JWE) and [[http://tools.ietf.org/html/rfc7517|JSON Web Key]] (JWK) specifications. JWS and JWE use JSON and base64url encoding to secure messages in a (relatively) simple, compact and web safe format while JWK defines a JSON representation of cryptographic keys. The actual algorithms for JWS, JWE and JWK are defined in [[http://tools.ietf.org/html/rfc7518|JSON Web Algorithms]] (JWA).
 
@@ -20,26 +22,6 @@ The jose4j library is available in the Maven Central Repository. To use it in yo
 }}}
 
 Dependency coordinate information for a number of other systems is available on the [[http://search.maven.org/#artifactdetails%7Corg.bitbucket.b_c%7Cjose4j%7C0.5.5%7Cjar|artifact details]] at central and compiled jars are also available on the [[../downloads|downloads page]].
-
-== Security ==
-
-jose4j is a standards conform implementation of the JOSE working group's specification. You, the developer, can choose any of the provided signature and encryption algorithms. 
-
-Before doing so please evaluate whether your application is reinventing the wheel by e.g. re-implementing SSL on your application layer. Don't do that.
-
-First look for available standards for your application security and available implementations before mixing your own security protocol!
-
-In general get help from the experts when building web applications.
-Read e.g.: Read https://www.owasp.org/index.php/Input_Validation_Cheat_Sheet
-
-Actually read the spec https://tools.ietf.org/html/rfc7518 and write down why your choice of algorithm makes sense for your implementation.
-
-Here are some general security guidelines when using jose4j:
-* check all inputs. 
-** whatever you receive from the outside could be forged
-** put length checks in place: Parameter too big or too small -> do not put it into jose4j but just bail out
-* Don't try to be helpful by returning explaining error messages.
-
 
 == Code Examples ==
 jose.4.j is very easy to use and, to help get started, some code examples are provided demonstrating common things you might want to do with it.
@@ -82,9 +64,10 @@ Additional and more detailed examples and explanations are available:
 
 * [[04-01-15-Transparency|Response and analysis to some potential JWT vulnerabilities]] has some (maybe) useful info on using AlgorithmConstraints to specify what algorithms are allowed per JOSE or JWT object
 
+* [[https://bitbucket.org/b_c/jose4j/wiki/Security%20Considerations%20via%20Axel%20Nennker%E2%80%8F|Axel Nennker‏ has written some security considerations]]
+
 == Need help? ==
 There's a [[http://stackoverflow.com/questions/tagged/jose4j|jose4j]] tag on Stack Overflow that I (and some others) are reasonably attentive to. The [[https://bitbucket.org/b_c/jose4j/issues|project issue tracker]] is also available, if you've found a defect or have an enhancement request. 
-
 
 == Release Notes == 
 The [[Release%20Notes|Release Notes]] give a changelog of the project. 
