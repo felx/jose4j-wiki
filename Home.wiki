@@ -64,7 +64,8 @@ Additional and more detailed examples and explanations are available:
 
 * [[04-01-15-Transparency|Response and analysis to some potential JWT vulnerabilities]] has some (maybe) useful info on using AlgorithmConstraints to specify what algorithms are allowed per JOSE or JWT object
 
-* [[https://bitbucket.org/b_c/jose4j/wiki/Security%20Considerations%20via%20Axel%20Nennker%E2%80%8F|Axel Nennker‏ has written some security considerations]]
+== Security Considerations ==
+[[https://bitbucket.org/b_c/jose4j/wiki/Security%20Considerations%20via%20Axel%20Nennker%E2%80%8F|Axel Nennker‏ has written some security considerations]]
 
 == Need help? ==
 There's a [[http://stackoverflow.com/questions/tagged/jose4j|jose4j]] tag on Stack Overflow that I (and some others) are reasonably attentive to. The [[https://bitbucket.org/b_c/jose4j/issues|project issue tracker]] is also available, if you've found a defect or have an enhancement request. 
