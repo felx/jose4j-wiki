@@ -123,6 +123,9 @@
     // Create a new JsonWebSignature
     JsonWebSignature jws = new JsonWebSignature();
 
+    // validate input alg
+    jws.setAlgorithmConstraints(new AlgorithmConstraints(ConstraintType.WHITELIST, AlgorithmIdentifiers.ECDSA_USING_P256_CURVE_AND_SHA256));
+
     // Set the compact serialization on the JWS
     jws.setCompactSerialization(compactSerialization);
 
