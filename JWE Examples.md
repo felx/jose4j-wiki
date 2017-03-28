@@ -52,6 +52,7 @@
 
     // That other party, the receiver, can then use JsonWebEncryption to decrypt the message.
     JsonWebEncryption receiverJwe = new JsonWebEncryption();
+    receiverJwe.setAlgorithmConstraints(new AlgorithmConstraints(ConstraintType.WHITELIST, KeyManagementAlgorithmIdentifiers.DIRECT));
 
     // Set the compact serialization on new Json Web Encryption object
     receiverJwe.setCompactSerialization(compactSerialization);
