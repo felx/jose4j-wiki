@@ -21,3 +21,15 @@ Here are some general security guidelines when using jose4j:
   JsonWebEncryption jwe = new JsonWebEncryption();
   jwe.setAlgorithmConstraints(new AlgorithmConstraints(WHITELIST, KeyManagementAlgorithmIdentifiers.RSA_OAEP));
 }}}
+
+{{{
+#!java
+
+    // Set the algorithm constraints based on what is agreed upon or expected from the sender
+    AlgorithmConstraints.ConstraintType wl = AlgorithmConstraints.ConstraintType.WHITELIST;
+    AlgorithmConstraints algConstraints = new AlgorithmConstraints(wl, KeyManagementAlgorithmIdentifiers.DIRECT);
+    receiverJwe.setAlgorithmConstraints(algConstraints);
+    AlgorithmConstraints encConstraints = new AlgorithmConstraints(wl, ContentEncryptionAlgorithmIdentifiers.AES_128_CBC_HMAC_SHA_256);
+    receiverJwe.setContentEncryptionAlgorithmConstraints(encConstraints);
+
+}}}
