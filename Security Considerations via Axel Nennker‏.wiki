@@ -15,13 +15,20 @@ Here are some general security guidelines when using jose4j:
 * Don't try to be helpful by returning explaining error messages.
 * check all inputs. 
 ** put length checks in place: Parameter too big or too small -> do not put it into jose4j but just bail out
-** whatever you receive from the outside could be forged. So when you are implementing a protocol that requires e.g. RSA_OAEP then you should check for this "alg" by using setAlgorithmConstraints. Please also see the examples that jose4j provides.
+** whatever you receive from the outside could be forged. So when you are implementing a protocol that requires e.g. RSA_OAEP then you should check for this "alg" by using setAlgorithmConstraints. 
+
+Please also see the examples that jose4j provides.
+
+**RSA_OAEP Example with AES_256_GCM**
 {{{
 #!java
+  // verify that we can decrypt the encrypted key
   JsonWebEncryption jwe = new JsonWebEncryption();
   jwe.setAlgorithmConstraints(new AlgorithmConstraints(WHITELIST, KeyManagementAlgorithmIdentifiers.RSA_OAEP));
+  jwe.setContentEncryptionAlgorithmConstraints(new AlgorithmConstraints(WHITELIST, ContentEncryptionAlgorithmIdentifiers.AES_256_GCM));
 }}}
 
+**Symmetric Crypto usingn AES_128_CBC_HMAC_SHA_256**
 {{{
 #!java
 
