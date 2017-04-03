@@ -253,6 +253,11 @@ Sometimes you'll need to crack open the JWT in order to know who issued it and h
     // each issuer, which you'd use to set up a HttpsJwksVerificationKeyResolver
     Key verificationKey = rsaJsonWebKey.getKey();
 
+    // And set up the allowed/expected algorithms
+    AlgorithmConstraints algorithmConstraints = new AlgorithmConstraints(ConstraintType.WHITELIST,
+            AlgorithmIdentifiers.RSA_USING_SHA256, AlgorithmIdentifiers.RSA_USING_SHA384);
+
+
     // Using info from the JwtContext, this JwtConsumer is set up to verify
     // the signature and validate the claims.
     JwtConsumer secondPassJwtConsumer = new JwtConsumerBuilder()
@@ -262,6 +267,7 @@ Sometimes you'll need to crack open the JWT in order to know who issued it and h
             .setAllowedClockSkewInSeconds(30)
             .setRequireSubject()
             .setExpectedAudience("Audience")
+            .setJwsAlgorithmConstraints(algorithmConstraints)
             .build();
 
     // Finally using the second JwtConsumer to actually validate the JWT. This operates on
