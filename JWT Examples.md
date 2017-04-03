@@ -6,7 +6,7 @@
 And example showing simple generation and consumption of a JWT 
 ```
 #!java
-        //
+    //
     // JSON Web Token is a compact URL-safe means of representing claims/attributes to be transferred between two parties.
     // This example demonstrates producing and consuming a signed JWT
     //
@@ -64,7 +64,7 @@ And example showing simple generation and consumption of a JWT
     // Use JwtConsumerBuilder to construct an appropriate JwtConsumer, which will
     // be used to validate and process the JWT.
     // The specific validation requirements for a JWT are context dependent, however,
-    // it typically advisable to require a expiration time, a trusted issuer, and
+    // it typically advisable to require a (reasonable) expiration time, a trusted issuer, and
     // and audience that identifies your system as the intended recipient.
     // If the JWT is encrypted too, you need only provide a decryption key or
     // decryption key resolver to the builder.
