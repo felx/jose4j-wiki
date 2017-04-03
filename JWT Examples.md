@@ -6,7 +6,7 @@
 And example showing simple generation and consumption of a JWT 
 ```
 #!java
-    //
+        //
     // JSON Web Token is a compact URL-safe means of representing claims/attributes to be transferred between two parties.
     // This example demonstrates producing and consuming a signed JWT
     //
@@ -64,18 +64,20 @@ And example showing simple generation and consumption of a JWT
     // Use JwtConsumerBuilder to construct an appropriate JwtConsumer, which will
     // be used to validate and process the JWT.
     // The specific validation requirements for a JWT are context dependent, however,
-    // it typically advisable to require a (reasonable) expiration time, a trusted issuer, and
+    // it typically advisable to require a expiration time, a trusted issuer, and
     // and audience that identifies your system as the intended recipient.
     // If the JWT is encrypted too, you need only provide a decryption key or
     // decryption key resolver to the builder.
     JwtConsumer jwtConsumer = new JwtConsumerBuilder()
             .setRequireExpirationTime() // the JWT must have an expiration time
-            .setMaxFutureValidityInMinutes(300) // but the  expiration time can't be too crazy
             .setAllowedClockSkewInSeconds(30) // allow some leeway in validating time based claims to account for clock skew
             .setRequireSubject() // the JWT must have a subject claim
             .setExpectedIssuer("Issuer") // whom the JWT needs to have been issued by
             .setExpectedAudience("Audience") // to whom the JWT is intended for
             .setVerificationKey(rsaJsonWebKey.getKey()) // verify the signature with the public key
+            .setJwsAlgorithmConstraints( // only allow the expected signature algorithm(s) in the given context
+                    new AlgorithmConstraints(ConstraintType.WHITELIST, // which is only RS256 here
+                            AlgorithmIdentifiers.RSA_USING_SHA256))
             .build(); // create the JwtConsumer instance
 
     try
