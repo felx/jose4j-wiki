@@ -367,15 +367,29 @@ Sometimes you'll need to crack open the JWT in order to know who issued it and h
     // Use JwtConsumerBuilder to construct an appropriate JwtConsumer, which will
     // be used to validate and process the JWT.
     // The specific validation requirements for a JWT are context dependent, however,
-    // it typically advisable to require a expiration time, a trusted issuer, and
+    // it typically advisable to require a (reasonable) expiration time, a trusted issuer, and
     // and audience that identifies your system as the intended recipient.
+    // It is also typically good to allow only the expected algorithm(s) in the given context
+    AlgorithmConstraints jwsAlgConstraints = new AlgorithmConstraints(ConstraintType.WHITELIST,
+            AlgorithmIdentifiers.ECDSA_USING_P256_CURVE_AND_SHA256);
+
+    AlgorithmConstraints jweAlgConstraints = new AlgorithmConstraints(ConstraintType.WHITELIST,
+            KeyManagementAlgorithmIdentifiers.ECDH_ES_A128KW);
+
+    AlgorithmConstraints jweEncConstraints = new AlgorithmConstraints(ConstraintType.WHITELIST,
+            ContentEncryptionAlgorithmIdentifiers.AES_128_CBC_HMAC_SHA_256);
+
     JwtConsumer jwtConsumer = new JwtConsumerBuilder()
             .setRequireExpirationTime() // the JWT must have an expiration time
+            .setMaxFutureValidityInMinutes(300) // but the  expiration time can't be too crazy
             .setRequireSubject() // the JWT must have a subject claim
             .setExpectedIssuer("sender") // whom the JWT needs to have been issued by
             .setExpectedAudience("receiver") // to whom the JWT is intended for
             .setDecryptionKey(receiverJwk.getPrivateKey()) // decrypt with the receiver's private key
             .setVerificationKey(senderJwk.getPublicKey()) // verify the signature with the sender's public key
+            .setJwsAlgorithmConstraints(jwsAlgConstraints) // limits the acceptable signature algorithm(s)
+            .setJweAlgorithmConstraints(jweAlgConstraints) // limits acceptable encryption key establishment algorithm(s)
+            .setJweContentEncryptionAlgorithmConstraints(jweEncConstraints) // limits acceptable content encryption algorithm(s)
             .build(); // create the JwtConsumer instance
 
     try
