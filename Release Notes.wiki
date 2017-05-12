@@ -1,3 +1,7 @@
+=== jose4j-0.5.6 - May 12, 2017 === 
+* Addressed #95 by allowing JwtConsumer to skip verification key resolution when alg is none by setting an option on the builder 
+* Addressed #78 such that JWK key_ops can now be a SimpleJwkFilter criteria and will be considered (only if present) in VerificationJwkSelector & DecryptionJwkSelector and the key resolvers that use them (HttpsJwksVerificationKeyResolver, JwksVerificationKeyResolver, and JwksDecryptionKeyResolver)
+
 === jose4j-0.5.5 - February 15, 2017 ===
 * Prior to ECDH key agreement when consuming a JWE, now checks whether the ephemeral public key is on the private key's curve
 * Addressed #84 algorithm constraint issue with JwtConsumer and some key resolvers
