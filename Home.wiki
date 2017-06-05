@@ -132,6 +132,6 @@ The jose.4.j library relies on the [[http://www.slf4j.org/|Simple Logging Facade
 As of v0.3.7 jose4j's JSON processing was derived from the [[https://code.google.com/p/json-simple/|JSON.simple toolkit]] and Base64 encoding/decoding was derived from the [[http://commons.apache.org/proper/commons-codec/|Apache Commons Codec]] project. 
 
 == Acknowledgments ==
-I'd like to thank Dan McNulty, Dmitry Vsekhvalnov, Guoping Liu, Jason Musgrave, Jeremie Miller, John Bradley, Justin Kwong, Thomas Broyer, Tim McLean, Jan Willem Janssen, Magnus Andersson, Samo Remec, Axel Nennker‏, Yang Yu, and Antonio Sanso for feedback and suggestions (please let me know if you deserve acknowledgment but I've somehow forgotten you). 
+I'd like to thank Dan McNulty, Dmitry Vsekhvalnov, Guoping Liu, Jason Musgrave, Jeremie Miller, John Bradley, Justin Kwong, Thomas Broyer, Tim McLean, Jan Willem Janssen, Magnus Andersson, Samo Remec, Axel Nennker‏, Yang Yu, Aaron Levin, and Antonio Sanso for feedback and suggestions (please let me know if you deserve acknowledgment but I've somehow forgotten you). 
 
 Lastly, but maybe most importantly, I'd like to thank my employer, [[https://www.pingidentity.com|Ping Identity]].  I do believe that Ping benefits from this work (the library is used extensively in Ping's products). But I know for sure none of it would have happened without Ping.
