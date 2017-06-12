@@ -1,3 +1,7 @@
+=== jose4j-0.5.7 - June 12, 2017 === 
+* Addressed #98 with range checks on byte length to bit length calculation
+* Addressed #97 by not re-encoding header when checking signature/integrity
+
 === jose4j-0.5.6 - May 12, 2017 === 
 * Addressed #95 by allowing JwtConsumer to skip verification key resolution when alg is none by setting an option on the builder 
 * Addressed #94 with an option to attempt verification on all candidate keys when more than one eligible are found with HttpsJwksVerificationKeyResolver and JwksVerificationKeyResolver
