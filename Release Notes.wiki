@@ -1,6 +1,6 @@
 === jose4j-0.5.7 - June 12, 2017 === 
 * Addressed #98 with range checks on byte length to bit length calculation
-* Addressed #97 by using the encoded header value as-is from the message when producing the singing input
+* Addressed #97 by using the encoded header value as-is from the message when producing the input into signing/HMAC and AEAD tag calculation 
 
 
 === jose4j-0.5.6 - May 12, 2017 === 
