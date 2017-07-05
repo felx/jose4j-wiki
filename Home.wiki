@@ -17,11 +17,11 @@ The jose4j library is available in the Maven Central Repository. To use it in yo
   <dependency>
     <groupId>org.bitbucket.b_c</groupId>
     <artifactId>jose4j</artifactId>
-    <version>0.5.7</version>
+    <version>0.5.8</version>
   </dependency>
 }}}
 
-Dependency coordinate information for a number of other systems is available on the [[http://search.maven.org/#artifactdetails%7Corg.bitbucket.b_c%7Cjose4j%7C0.5.7%7Cjar|artifact details]] at central and compiled jars are also available on the [[../downloads|downloads page]].
+Dependency coordinate information for a number of other systems is available on the [[http://search.maven.org/#artifactdetails%7Corg.bitbucket.b_c%7Cjose4j%7C0.5.8%7Cjar|artifact details]] at central and compiled jars are also available on the [[../downloads|downloads page]].
 
 == Code Examples ==
 jose.4.j is very easy to use and, to help get started, some code examples are provided demonstrating common things you might want to do with it.
