@@ -1,5 +1,5 @@
 === jose4j-0.5.8 - July 5, 2017 === 
-* a SignatureException out of JCA Signature verify will now return false for signature verification rather than bubbling up an exception
+* A SignatureException out of JCA Signature verify will now return false for signature verification rather than bubbling up an exception
 
 === jose4j-0.5.7 - June 12, 2017 === 
 * Addressed #98 with range checks on byte length to bit length calculation
