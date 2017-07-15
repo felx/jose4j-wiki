@@ -54,7 +54,8 @@ Additional and more detailed examples and explanations are available:
 
 * [[JWT%20Examples|JWT Examples]] shows how to produce and consume JSON Web Tokens.
 
-* [[JWS%20Examples|JWS Examples]] shows how to easily apply and verify signatures.
+* [[JWS%20Examples|JWS Examples]] shows how to easily apply and verify signatures including how to use the [[JWS%20Examples#markdown-header-using-the-rfc-7797-jws-unencoded-payload-option|"b64" RFC 7797 JWS Unencoded Payload Option]]
+
 
 * [[JWE%20Examples|JWE Examples]] shows how to encrypt and decrypt messages.
 
