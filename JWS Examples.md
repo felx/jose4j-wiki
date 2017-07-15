@@ -1,3 +1,5 @@
+[TOC]
+
 ## JWS Code Examples ##
 
 ### Signing with JWS ###
