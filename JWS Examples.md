@@ -43,7 +43,7 @@
 ```
 #!java
 
-        //
+    //
     // An example of signature verification using JSON Web Signature (JWS)
     // where the verification key is obtained from a JSON Web Key Set document.
     //
@@ -148,4 +148,88 @@
 
     // Do something useful with the content
     System.out.println("JWS payload: " + payload);
+```
+
+
+### Using the RFC 7797 JWS Unencoded Payload Option ###
+
+
+```
+#!java
+
+    //
+    // An example of signature application and verification using the
+    // RFC 7797 JSON Web Signature (JWS) Unencoded Payload Option with  
+    // the "b64" header set to false indicating that the payload is not
+    // base64url encoded when calculating the signature 
+    //
+
+    // The public/private key pair for this example as a JWK
+    PublicJsonWebKey jwk = PublicJsonWebKey.Factory.newPublicJwk("{" +
+            "  \"kty\": \"EC\"," +
+            "  \"d\": \"Tk7qzHNnSBMioAU7NwZ9JugFWmWbUCyzeBRjVcTp_so\"," +
+            "  \"use\": \"sig\"," +
+            "  \"crv\": \"P-256\"," +
+            "  \"kid\": \"example\"," +
+            "  \"x\": \"qqeGjWmYZU5M5bBrRw1zqZcbPunoFVxsfaa9JdA0R5I\"," +
+            "  \"y\": \"wnoj0YjheNP80XYh1SEvz1-wnKByEoHvb6KrDcjMuWc\"" +
+            "}");
+
+    // The message to be signed
+    String content = "this is the content that will be signed";
+
+    // Create a new JsonWebSignature object for the signing
+    JsonWebSignature signerJws = new JsonWebSignature();
+
+    // The content is the payload of the JWS
+    signerJws.setPayload(content);
+
+    // Set the signature algorithm on the JWS
+    signerJws.setAlgorithmHeaderValue(AlgorithmIdentifiers.ECDSA_USING_P256_CURVE_AND_SHA256);
+
+    // The private key is used to sign
+    signerJws.setKey(jwk.getPrivateKey());
+
+    // Set the Key ID (kid) header because it's just the polite thing to do.
+    signerJws.setKeyIdHeaderValue(jwk.getKeyId());
+
+    // Set the "b64" header to false, which indicates that the payload is not encoded
+    // when calculating the signature (per RFC 7797)
+    signerJws.getHeaders().setObjectHeaderValue(HeaderParameterNames.BASE64URL_ENCODE_PAYLOAD, false);
+
+    // RFC 7797 requires that the b64" header be listed as critical
+    signerJws.setCriticalHeaderNames(HeaderParameterNames.BASE64URL_ENCODE_PAYLOAD);
+
+    // Produce the compact serialization with an empty/detached payload,
+    // which is the encoded header + ".." + the encoded signature
+    String detachedContentJws = signerJws.getDetachedContentCompactSerialization();
+
+    // Send the JWS and content somewhere
+    // The content might be the body of an HTTP message while the JWS value is carried in a header
+    System.out.println(detachedContentJws);
+    System.out.println(content);
+
+    // Use a JsonWebSignature object to verify the signature
+    JsonWebSignature verifierJws = new JsonWebSignature();
+
+    // Set the algorithm constraints based on what is agreed upon or expected from the sender
+    verifierJws.setAlgorithmConstraints(new AlgorithmConstraints(
+            AlgorithmConstraints.ConstraintType.WHITELIST,
+            AlgorithmIdentifiers.ECDSA_USING_P256_CURVE_AND_SHA256));
+
+    // The JWS with detached content is the compact serialization
+    verifierJws.setCompactSerialization(detachedContentJws);
+
+    // The unencoded detached content is the payload
+    verifierJws.setPayload(content);
+
+    // The public key is used to verify the signature
+    verifierJws.setKey(jwk.getPublicKey());
+
+    // Check the signature
+    boolean signatureVerified = verifierJws.verifySignature();
+
+    // Do whatever needs to be done with the result of signature verification
+    System.out.println("JWS Signature is valid: " + signatureVerified);
+  
 ```
