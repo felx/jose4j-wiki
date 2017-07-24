@@ -91,6 +91,21 @@ And example showing simple generation and consumption of a JWT
         // InvalidJwtException will be thrown, if the JWT failed processing or validation in anyway.
         // Hopefully with meaningful explanations(s) about what went wrong.
         System.out.println("Invalid JWT! " + e);
+
+        // Programmatic access to (some) specific reasons for JWT invalidity is also possible
+        // should you want different error handling behavior for certain conditions.
+
+        // Whether or not the JWT has expired being one common reason for invalidity
+        if (e.hasExpired())
+        {
+            System.out.println("JWT expired at " + e.getJwtContext().getJwtClaims().getExpirationTime());
+        }
+
+        // Or maybe the audience was invalid
+        if (e.hasErrorCode(ErrorCodes.AUDIENCE_INVALID))
+        {
+            System.out.println("JWT had wrong audience: " + e.getJwtContext().getJwtClaims().getAudience());
+        }
     }
 
 ```
