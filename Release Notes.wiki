@@ -1,3 +1,9 @@
+=== jose4j-0.6.0 - July 24, 2017 === 
+* Addressed issue #76 by providing programatic access to specific reasons for JWT invalidity through error codes on InvalidJwtException
+* Addressed Issue #45 with support for the RFC 7797 b64 header for JSON Web Signature (JWS) Unencoded Payload Option
+* Addressed Issue #99 by allowing the JWS payload to be an arbitrary sequence of bytes (rather than only a string)
+
+
 === jose4j-0.5.8 - July 5, 2017 === 
 * A SignatureException out of JCA Signature verify will now return false for signature verification rather than bubbling up an exception
 
