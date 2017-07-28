@@ -197,7 +197,7 @@
     // when calculating the signature (per RFC 7797)
     signerJws.getHeaders().setObjectHeaderValue(HeaderParameterNames.BASE64URL_ENCODE_PAYLOAD, false);
 
-    // RFC 7797 requires that the b64" header be listed as critical
+    // RFC 7797 requires that the "b64" header be listed as critical
     signerJws.setCriticalHeaderNames(HeaderParameterNames.BASE64URL_ENCODE_PAYLOAD);
 
     // Produce the compact serialization with an empty/detached payload,
